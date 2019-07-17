@@ -1,0 +1,3 @@
+MODULE Alarma
+	SUBMODULE segundo
+		INSTANCE XLXI_6

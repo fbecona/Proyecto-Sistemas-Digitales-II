@@ -1,0 +1,3 @@
+MODULE Circuito
+	SUBMODULE SieteSegmentos
+		INSTANCE XLXI_6

@@ -1,0 +1,6 @@
+sch2sym -intstyle ise -family spartan3e -refsym segundo C:/Users/Rodrigo/ProyectoFinalSd2/segundo.sch C:/Users/Rodrigo/ProyectoFinalSd2/segundo.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym segundo C:/Users/Rodrigo/ProyectoFinalSd2/segundo.sch C:/Users/Rodrigo/ProyectoFinalSd2/segundo.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym segundo C:/Users/Rodrigo/ProyectoFinalSd2/segundo.sch C:/Users/Rodrigo/ProyectoFinalSd2/segundo.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym segundo C:/Users/Rodrigo/ProyectoFinalSd2/segundo.sch C:/Users/Rodrigo/ProyectoFinalSd2/segundo.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym segundo C:/Users/Rodrigo/ProyectoFinalSd2/segundo.sch C:/Users/Rodrigo/ProyectoFinalSd2/segundo.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym segundo C:/Users/Rodrigo/ProyectoFinalSd2/segundo.sch C:/Users/Rodrigo/ProyectoFinalSd2/segundo.sym 

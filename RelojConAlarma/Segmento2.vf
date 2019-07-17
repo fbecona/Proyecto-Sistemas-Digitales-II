@@ -1,0 +1,58 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Segmento2.vf
+// /___/   /\     Timestamp : 06/25/2019 22:43:53
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog C:/Users/GOKU/ProyectoFinalSd2/ProyectoFinalSd2/Segmento2.vf -w C:/Users/GOKU/ProyectoFinalSd2/ProyectoFinalSd2/Segmento2.sch
+//Design Name: Segmento2
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Segmento2(IN0, 
+                 IN1, 
+                 IN2, 
+                 IN3, 
+                 OUT2);
+
+    input IN0;
+    input IN1;
+    input IN2;
+    input IN3;
+   output OUT2;
+   
+   wire XLXN_43;
+   wire XLXN_44;
+   wire XLXN_45;
+   wire XLXN_47;
+   wire XLXN_54;
+   
+   OR2  XLXI_4 (.I0(XLXN_54), 
+               .I1(IN3), 
+               .O(XLXN_43));
+   OR2  XLXI_8 (.I0(IN1), 
+               .I1(IN2), 
+               .O(XLXN_45));
+   INV  XLXI_10 (.I(IN2), 
+                .O(XLXN_54));
+   INV  XLXI_11 (.I(IN0), 
+                .O(XLXN_47));
+   AND3  XLXI_12 (.I0(XLXN_45), 
+                 .I1(XLXN_43), 
+                 .I2(XLXN_44), 
+                 .O(OUT2));
+   OR2  XLXI_13 (.I0(IN3), 
+                .I1(XLXN_47), 
+                .O(XLXN_44));
+endmodule

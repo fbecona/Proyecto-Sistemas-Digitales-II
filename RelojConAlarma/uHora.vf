@@ -1,0 +1,212 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : uHora.vf
+// /___/   /\     Timestamp : 06/25/2019 22:43:57
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog C:/Users/GOKU/ProyectoFinalSd2/ProyectoFinalSd2/uHora.vf -w C:/Users/GOKU/ProyectoFinalSd2/ProyectoFinalSd2/uHora.sch
+//Design Name: uHora
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module FTCE_MXILINX_uHora(C, 
+                          CE, 
+                          CLR, 
+                          T, 
+                          Q);
+
+   parameter INIT = 1'b0;
+   
+    input C;
+    input CE;
+    input CLR;
+    input T;
+   output Q;
+   
+   wire TQ;
+   wire Q_DUMMY;
+   
+   assign Q = Q_DUMMY;
+   XOR2  I_36_32 (.I0(T), 
+                 .I1(Q_DUMMY), 
+                 .O(TQ));
+   (* RLOC = "X0Y0" *) 
+   FDCE  I_36_35 (.C(C), 
+                 .CE(CE), 
+                 .CLR(CLR), 
+                 .D(TQ), 
+                 .Q(Q_DUMMY));
+endmodule
+`timescale 1ns / 1ps
+
+module CB4CE_MXILINX_uHora(C, 
+                           CE, 
+                           CLR, 
+                           CEO, 
+                           Q0, 
+                           Q1, 
+                           Q2, 
+                           Q3, 
+                           TC);
+
+    input C;
+    input CE;
+    input CLR;
+   output CEO;
+   output Q0;
+   output Q1;
+   output Q2;
+   output Q3;
+   output TC;
+   
+   wire T2;
+   wire T3;
+   wire XLXN_1;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire Q2_DUMMY;
+   wire Q3_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   assign Q2 = Q2_DUMMY;
+   assign Q3 = Q3_DUMMY;
+   assign TC = TC_DUMMY;
+   (* HU_SET = "I_Q0_103" *) 
+   FTCE_MXILINX_uHora #( .INIT(1'b0) ) I_Q0 (.C(C), 
+                            .CE(CE), 
+                            .CLR(CLR), 
+                            .T(XLXN_1), 
+                            .Q(Q0_DUMMY));
+   (* HU_SET = "I_Q1_104" *) 
+   FTCE_MXILINX_uHora #( .INIT(1'b0) ) I_Q1 (.C(C), 
+                            .CE(CE), 
+                            .CLR(CLR), 
+                            .T(Q0_DUMMY), 
+                            .Q(Q1_DUMMY));
+   (* HU_SET = "I_Q2_105" *) 
+   FTCE_MXILINX_uHora #( .INIT(1'b0) ) I_Q2 (.C(C), 
+                            .CE(CE), 
+                            .CLR(CLR), 
+                            .T(T2), 
+                            .Q(Q2_DUMMY));
+   (* HU_SET = "I_Q3_106" *) 
+   FTCE_MXILINX_uHora #( .INIT(1'b0) ) I_Q3 (.C(C), 
+                            .CE(CE), 
+                            .CLR(CLR), 
+                            .T(T3), 
+                            .Q(Q3_DUMMY));
+   AND4  I_36_31 (.I0(Q3_DUMMY), 
+                 .I1(Q2_DUMMY), 
+                 .I2(Q1_DUMMY), 
+                 .I3(Q0_DUMMY), 
+                 .O(TC_DUMMY));
+   AND3  I_36_32 (.I0(Q2_DUMMY), 
+                 .I1(Q1_DUMMY), 
+                 .I2(Q0_DUMMY), 
+                 .O(T3));
+   AND2  I_36_33 (.I0(Q1_DUMMY), 
+                 .I1(Q0_DUMMY), 
+                 .O(T2));
+   VCC  I_36_58 (.P(XLXN_1));
+   AND2  I_36_67 (.I0(CE), 
+                 .I1(TC_DUMMY), 
+                 .O(CEO));
+endmodule
+`timescale 1ns / 1ps
+
+module uHora(C, 
+             R, 
+             C4, 
+             C10, 
+             Q0, 
+             Q1, 
+             Q2, 
+             Q3);
+
+    input C;
+    input R;
+   output C4;
+   output C10;
+   output Q0;
+   output Q1;
+   output Q2;
+   output Q3;
+   
+   wire XLXN_67;
+   wire XLXN_69;
+   wire XLXN_70;
+   wire XLXN_72;
+   wire XLXN_76;
+   wire XLXN_77;
+   wire XLXN_79;
+   wire XLXN_80;
+   wire XLXN_82;
+   wire XLXN_83;
+   wire XLXN_84;
+   wire C10_DUMMY;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire Q2_DUMMY;
+   wire Q3_DUMMY;
+   
+   assign C10 = C10_DUMMY;
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   assign Q2 = Q2_DUMMY;
+   assign Q3 = Q3_DUMMY;
+   AND2  XLXI_2 (.I0(XLXN_72), 
+                .I1(XLXN_70), 
+                .O(C10_DUMMY));
+   AND2  XLXI_3 (.I0(Q1_DUMMY), 
+                .I1(XLXN_76), 
+                .O(XLXN_70));
+   AND2  XLXI_4 (.I0(Q3_DUMMY), 
+                .I1(XLXN_69), 
+                .O(XLXN_72));
+   VCC  XLXI_16 (.P(XLXN_67));
+   INV  XLXI_24 (.I(Q2_DUMMY), 
+                .O(XLXN_69));
+   INV  XLXI_25 (.I(Q0_DUMMY), 
+                .O(XLXN_76));
+   (* HU_SET = "XLXI_26_107" *) 
+   CB4CE_MXILINX_uHora  XLXI_26 (.C(C), 
+                                .CE(XLXN_67), 
+                                .CLR(XLXN_77), 
+                                .CEO(), 
+                                .Q0(Q0_DUMMY), 
+                                .Q1(Q1_DUMMY), 
+                                .Q2(Q2_DUMMY), 
+                                .Q3(Q3_DUMMY), 
+                                .TC());
+   OR2  XLXI_33 (.I0(C10_DUMMY), 
+                .I1(R), 
+                .O(XLXN_77));
+   AND2  XLXI_34 (.I0(XLXN_84), 
+                 .I1(XLXN_83), 
+                 .O(XLXN_79));
+   AND2  XLXI_35 (.I0(XLXN_82), 
+                 .I1(Q2_DUMMY), 
+                 .O(XLXN_80));
+   AND2  XLXI_36 (.I0(XLXN_80), 
+                 .I1(XLXN_79), 
+                 .O(C4));
+   INV  XLXI_40 (.I(Q3_DUMMY), 
+                .O(XLXN_82));
+   INV  XLXI_41 (.I(Q0_DUMMY), 
+                .O(XLXN_83));
+   INV  XLXI_42 (.I(Q1_DUMMY), 
+                .O(XLXN_84));
+endmodule

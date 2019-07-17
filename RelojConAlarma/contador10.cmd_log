@@ -1,0 +1,8 @@
+sch2sym -intstyle ise -family spartan3e -refsym contador10 C:/Users/Rodrigo/ProyectoFinalSd2/contador10.sch C:/Users/Rodrigo/ProyectoFinalSd2/contador10.sym 
+sch2sym -intstyle ise -family spartan3e -refsym contador10 C:/Users/Rodrigo/ProyectoFinalSd2/contador10.sch C:/Users/Rodrigo/ProyectoFinalSd2/contador10.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym contador10 C:/Users/Rodrigo/ProyectoFinalSd2/contador10.sch C:/Users/Rodrigo/ProyectoFinalSd2/contador10.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym contador10 C:/Users/Rodrigo/ProyectoFinalSd2/contador10.sch C:/Users/Rodrigo/ProyectoFinalSd2/contador10.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym contador10 C:/Users/Rodrigo/ProyectoFinalSd2/contador10.sch C:/Users/Rodrigo/ProyectoFinalSd2/contador10.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym contador10 C:/Users/Rodrigo/ProyectoFinalSd2/contador10.sch C:/Users/Rodrigo/ProyectoFinalSd2/contador10.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym contador10 C:/Users/GOKU/ProyectoFinalSd2/ProyectoFinalSd2/contador10.sch C:/Users/GOKU/ProyectoFinalSd2/ProyectoFinalSd2/contador10.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym contador10 C:/Users/GOKU/ProyectoFinalSd2/ProyectoFinalSd2/contador10.sch C:/Users/GOKU/ProyectoFinalSd2/ProyectoFinalSd2/contador10.sym 

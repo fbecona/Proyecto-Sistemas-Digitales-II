@@ -1,0 +1,135 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : conta2.vf
+// /___/   /\     Timestamp : 06/25/2019 22:43:52
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog C:/Users/GOKU/ProyectoFinalSd2/ProyectoFinalSd2/conta2.vf -w C:/Users/GOKU/ProyectoFinalSd2/ProyectoFinalSd2/conta2.sch
+//Design Name: conta2
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module FTCE_MXILINX_conta2(C, 
+                           CE, 
+                           CLR, 
+                           T, 
+                           Q);
+
+   parameter INIT = 1'b0;
+   
+    input C;
+    input CE;
+    input CLR;
+    input T;
+   output Q;
+   
+   wire TQ;
+   wire Q_DUMMY;
+   
+   assign Q = Q_DUMMY;
+   XOR2  I_36_32 (.I0(T), 
+                 .I1(Q_DUMMY), 
+                 .O(TQ));
+   (* RLOC = "X0Y0" *) 
+   FDCE  I_36_35 (.C(C), 
+                 .CE(CE), 
+                 .CLR(CLR), 
+                 .D(TQ), 
+                 .Q(Q_DUMMY));
+endmodule
+`timescale 1ns / 1ps
+
+module CB2CE_MXILINX_conta2(C, 
+                            CE, 
+                            CLR, 
+                            CEO, 
+                            Q0, 
+                            Q1, 
+                            TC);
+
+    input C;
+    input CE;
+    input CLR;
+   output CEO;
+   output Q0;
+   output Q1;
+   output TC;
+   
+   wire XLXN_1;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   assign TC = TC_DUMMY;
+   (* HU_SET = "I_Q0_0" *) 
+   FTCE_MXILINX_conta2 #( .INIT(1'b0) ) I_Q0 (.C(C), 
+                             .CE(CE), 
+                             .CLR(CLR), 
+                             .T(XLXN_1), 
+                             .Q(Q0_DUMMY));
+   (* HU_SET = "I_Q1_1" *) 
+   FTCE_MXILINX_conta2 #( .INIT(1'b0) ) I_Q1 (.C(C), 
+                             .CE(CE), 
+                             .CLR(CLR), 
+                             .T(Q0_DUMMY), 
+                             .Q(Q1_DUMMY));
+   AND2  I_36_37 (.I0(Q1_DUMMY), 
+                 .I1(Q0_DUMMY), 
+                 .O(TC_DUMMY));
+   VCC  I_36_47 (.P(XLXN_1));
+   AND2  I_36_52 (.I0(CE), 
+                 .I1(TC_DUMMY), 
+                 .O(CEO));
+endmodule
+`timescale 1ns / 1ps
+
+module conta2(C, 
+              R, 
+              C2, 
+              Q0, 
+              Q1);
+
+    input C;
+    input R;
+   output C2;
+   output Q0;
+   output Q1;
+   
+   wire XLXN_53;
+   wire XLXN_56;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire C2_DUMMY;
+   
+   assign C2 = C2_DUMMY;
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   (* HU_SET = "XLXI_32_2" *) 
+   CB2CE_MXILINX_conta2  XLXI_32 (.C(C), 
+                                 .CE(XLXN_53), 
+                                 .CLR(XLXN_56), 
+                                 .CEO(), 
+                                 .Q0(Q0_DUMMY), 
+                                 .Q1(Q1_DUMMY), 
+                                 .TC());
+   VCC  XLXI_33 (.P(XLXN_53));
+   AND2  XLXI_34 (.I0(Q1_DUMMY), 
+                 .I1(Q0_DUMMY), 
+                 .O(C2_DUMMY));
+   OR2  XLXI_35 (.I0(C2_DUMMY), 
+                .I1(R), 
+                .O(XLXN_56));
+endmodule

@@ -1,0 +1,200 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : contador10.vf
+// /___/   /\     Timestamp : 06/25/2019 22:43:53
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog C:/Users/GOKU/ProyectoFinalSd2/ProyectoFinalSd2/contador10.vf -w C:/Users/GOKU/ProyectoFinalSd2/ProyectoFinalSd2/contador10.sch
+//Design Name: contador10
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module FTRSE_MXILINX_contador10(C, 
+                                CE, 
+                                R, 
+                                S, 
+                                T, 
+                                Q);
+
+   parameter INIT = 1'b0;
+   
+    input C;
+    input CE;
+    input R;
+    input S;
+    input T;
+   output Q;
+   
+   wire CE_S;
+   wire D_S;
+   wire TQ;
+   wire Q_DUMMY;
+   
+   assign Q = Q_DUMMY;
+   XOR2  I_36_32 (.I0(T), 
+                 .I1(Q_DUMMY), 
+                 .O(TQ));
+   (* RLOC = "X0Y0" *) 
+   FDRE  I_36_35 (.C(C), 
+                 .CE(CE_S), 
+                 .D(D_S), 
+                 .R(R), 
+                 .Q(Q_DUMMY));
+   OR2  I_36_73 (.I0(S), 
+                .I1(TQ), 
+                .O(D_S));
+   OR2  I_36_77 (.I0(CE), 
+                .I1(S), 
+                .O(CE_S));
+endmodule
+`timescale 1ns / 1ps
+
+module CB4RE_MXILINX_contador10(C, 
+                                CE, 
+                                R, 
+                                CEO, 
+                                Q0, 
+                                Q1, 
+                                Q2, 
+                                Q3, 
+                                TC);
+
+    input C;
+    input CE;
+    input R;
+   output CEO;
+   output Q0;
+   output Q1;
+   output Q2;
+   output Q3;
+   output TC;
+   
+   wire T2;
+   wire T3;
+   wire XLXN_1;
+   wire XLXN_2;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire Q2_DUMMY;
+   wire Q3_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   assign Q2 = Q2_DUMMY;
+   assign Q3 = Q3_DUMMY;
+   assign TC = TC_DUMMY;
+   (* HU_SET = "I_Q0_13" *) 
+   FTRSE_MXILINX_contador10 #( .INIT(1'b0) ) I_Q0 (.C(C), 
+                                  .CE(CE), 
+                                  .R(R), 
+                                  .S(XLXN_2), 
+                                  .T(XLXN_1), 
+                                  .Q(Q0_DUMMY));
+   (* HU_SET = "I_Q1_14" *) 
+   FTRSE_MXILINX_contador10 #( .INIT(1'b0) ) I_Q1 (.C(C), 
+                                  .CE(CE), 
+                                  .R(R), 
+                                  .S(XLXN_2), 
+                                  .T(Q0_DUMMY), 
+                                  .Q(Q1_DUMMY));
+   (* HU_SET = "I_Q2_15" *) 
+   FTRSE_MXILINX_contador10 #( .INIT(1'b0) ) I_Q2 (.C(C), 
+                                  .CE(CE), 
+                                  .R(R), 
+                                  .S(XLXN_2), 
+                                  .T(T2), 
+                                  .Q(Q2_DUMMY));
+   (* HU_SET = "I_Q3_16" *) 
+   FTRSE_MXILINX_contador10 #( .INIT(1'b0) ) I_Q3 (.C(C), 
+                                  .CE(CE), 
+                                  .R(R), 
+                                  .S(XLXN_2), 
+                                  .T(T3), 
+                                  .Q(Q3_DUMMY));
+   AND4  I_36_31 (.I0(Q3_DUMMY), 
+                 .I1(Q2_DUMMY), 
+                 .I2(Q1_DUMMY), 
+                 .I3(Q0_DUMMY), 
+                 .O(TC_DUMMY));
+   AND3  I_36_32 (.I0(Q2_DUMMY), 
+                 .I1(Q1_DUMMY), 
+                 .I2(Q0_DUMMY), 
+                 .O(T3));
+   AND2  I_36_33 (.I0(Q1_DUMMY), 
+                 .I1(Q0_DUMMY), 
+                 .O(T2));
+   VCC  I_36_58 (.P(XLXN_1));
+   GND  I_36_64 (.G(XLXN_2));
+   AND2  I_36_69 (.I0(CE), 
+                 .I1(TC_DUMMY), 
+                 .O(CEO));
+endmodule
+`timescale 1ns / 1ps
+
+module contador10(C, 
+                  E, 
+                  C10, 
+                  Q0, 
+                  Q1, 
+                  Q2, 
+                  Q3);
+
+    input C;
+    input E;
+   output C10;
+   output Q0;
+   output Q1;
+   output Q2;
+   output Q3;
+   
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_20;
+   wire XLXN_42;
+   wire C10_DUMMY;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire Q2_DUMMY;
+   wire Q3_DUMMY;
+   
+   assign C10 = C10_DUMMY;
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   assign Q2 = Q2_DUMMY;
+   assign Q3 = Q3_DUMMY;
+   (* HU_SET = "XLXI_1_17" *) 
+   CB4RE_MXILINX_contador10  XLXI_1 (.C(C), 
+                                    .CE(E), 
+                                    .R(C10_DUMMY), 
+                                    .CEO(), 
+                                    .Q0(Q0_DUMMY), 
+                                    .Q1(Q1_DUMMY), 
+                                    .Q2(Q2_DUMMY), 
+                                    .Q3(Q3_DUMMY), 
+                                    .TC());
+   AND2  XLXI_2 (.I0(XLXN_20), 
+                .I1(Q0_DUMMY), 
+                .O(XLXN_3));
+   AND2  XLXI_3 (.I0(Q3_DUMMY), 
+                .I1(XLXN_42), 
+                .O(XLXN_4));
+   AND2  XLXI_4 (.I0(XLXN_4), 
+                .I1(XLXN_3), 
+                .O(C10_DUMMY));
+   INV  XLXI_14 (.I(Q1_DUMMY), 
+                .O(XLXN_20));
+   INV  XLXI_24 (.I(Q2_DUMMY), 
+                .O(XLXN_42));
+endmodule

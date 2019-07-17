@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="ProyectoFinalSd2.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Alarma.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="Alarma.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Circuito.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="Circuito.vf"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="Contador6Minuto.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Segmento0.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="Segmento0.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Segmento1.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="Segmento1.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Segmento2.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="Segmento2.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Segmento3.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="Segmento3.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Segmento4.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="Segmento4.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Segmento5.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="Segmento5.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Segmento6.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="Segmento6.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="SieteSegmentos.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="SieteSegmentos.vf"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="conta10.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="conta2.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="conta2.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="contador10.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="contador10.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="contador5.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="contador5.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="contador6.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="contador6.vf"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="minuto.vf"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="reloj.bgn" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="reloj.bit" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="reloj.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="reloj.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="reloj.drc" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_JHD" xil_pn:name="reloj.jhd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="reloj.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="reloj.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="reloj.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="reloj.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="reloj.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="reloj.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="reloj.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="reloj.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="reloj.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="reloj.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="reloj.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="reloj.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="reloj.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="reloj.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="reloj.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="reloj.ut" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="reloj.vf"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="reloj.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="reloj.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="reloj_envsettings.html"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="reloj_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="reloj_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="reloj_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="reloj_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="reloj_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="reloj_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="reloj_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="reloj_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="reloj_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="reloj_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="reloj_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="reloj_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="reloj_usage.xml"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="reloj_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="segundo.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="segundo.vf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="uHora.sym" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="uHora.vf"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1562203037" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1562203037">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1562301590" xil_pn:in_ck="7835790197140142748" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-5449758167314393355" xil_pn:start_ts="1562301564">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Alarma.vf"/>
+      <outfile xil_pn:name="Circuito.vf"/>
+      <outfile xil_pn:name="Contador6Minuto.vf"/>
+      <outfile xil_pn:name="Segmento0.vf"/>
+      <outfile xil_pn:name="Segmento1.vf"/>
+      <outfile xil_pn:name="Segmento2.vf"/>
+      <outfile xil_pn:name="Segmento3.vf"/>
+      <outfile xil_pn:name="Segmento4.vf"/>
+      <outfile xil_pn:name="Segmento5.vf"/>
+      <outfile xil_pn:name="Segmento6.vf"/>
+      <outfile xil_pn:name="SieteSegmentos.vf"/>
+      <outfile xil_pn:name="conta10.vf"/>
+      <outfile xil_pn:name="conta2.vf"/>
+      <outfile xil_pn:name="contador10.vf"/>
+      <outfile xil_pn:name="contador5.vf"/>
+      <outfile xil_pn:name="contador6.vf"/>
+      <outfile xil_pn:name="minuto.vf"/>
+      <outfile xil_pn:name="reloj.vf"/>
+      <outfile xil_pn:name="segundo.vf"/>
+      <outfile xil_pn:name="uHora.vf"/>
+    </transform>
+    <transform xil_pn:end_ts="1562203044" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-3902574812640493217" xil_pn:start_ts="1562203044">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1562203044" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1562203044">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1562203044" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="6455961253992253555" xil_pn:start_ts="1562203044">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1562203044" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="2988080280822507185" xil_pn:start_ts="1562203044">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1562203044" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="6878997264670091945" xil_pn:start_ts="1562203044">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1562301606" xil_pn:in_ck="-8051351330186034231" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-5593832597756084174" xil_pn:start_ts="1562301590">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="reloj.jhd"/>
+      <outfile xil_pn:name="reloj.lso"/>
+      <outfile xil_pn:name="reloj.ngc"/>
+      <outfile xil_pn:name="reloj.ngr"/>
+      <outfile xil_pn:name="reloj.prj"/>
+      <outfile xil_pn:name="reloj.stx"/>
+      <outfile xil_pn:name="reloj.syr"/>
+      <outfile xil_pn:name="reloj.xst"/>
+      <outfile xil_pn:name="reloj_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1562203055" xil_pn:in_ck="-6427539946525242495" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="4066557905391689374" xil_pn:start_ts="1562203055">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1562301616" xil_pn:in_ck="8874822899360144259" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="4298857175997604930" xil_pn:start_ts="1562301606">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="reloj.bld"/>
+      <outfile xil_pn:name="reloj.ngd"/>
+      <outfile xil_pn:name="reloj_ngdbuild.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1562301623" xil_pn:in_ck="8874822899360144260" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="3236488012892527759" xil_pn:start_ts="1562301616">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <outfile xil_pn:name="reloj.pcf"/>
+      <outfile xil_pn:name="reloj_map.map"/>
+      <outfile xil_pn:name="reloj_map.mrp"/>
+      <outfile xil_pn:name="reloj_map.ncd"/>
+      <outfile xil_pn:name="reloj_map.ngm"/>
+      <outfile xil_pn:name="reloj_map.xrpt"/>
+      <outfile xil_pn:name="reloj_summary.xml"/>
+      <outfile xil_pn:name="reloj_usage.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1562301643" xil_pn:in_ck="-6323853037368767331" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="1934304854298957634" xil_pn:start_ts="1562301623">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <outfile xil_pn:name="reloj.ncd"/>
+      <outfile xil_pn:name="reloj.pad"/>
+      <outfile xil_pn:name="reloj.par"/>
+      <outfile xil_pn:name="reloj.ptwx"/>
+      <outfile xil_pn:name="reloj.unroutes"/>
+      <outfile xil_pn:name="reloj.xpi"/>
+      <outfile xil_pn:name="reloj_pad.csv"/>
+      <outfile xil_pn:name="reloj_pad.txt"/>
+      <outfile xil_pn:name="reloj_par.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1562301654" xil_pn:in_ck="164778995273311" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="2969983391363831627" xil_pn:start_ts="1562301643">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+      <outfile xil_pn:name="reloj.bgn"/>
+      <outfile xil_pn:name="reloj.bit"/>
+      <outfile xil_pn:name="reloj.drc"/>
+      <outfile xil_pn:name="reloj.ut"/>
+      <outfile xil_pn:name="usage_statistics_webtalk.html"/>
+      <outfile xil_pn:name="webtalk.log"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1562201667" xil_pn:in_ck="164778995260457" xil_pn:name="TRAN_impactProgrammingTool" xil_pn:prop_ck="1890673188639090495" xil_pn:start_ts="1562201667">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
+    </transform>
+    <transform xil_pn:end_ts="1562300121" xil_pn:in_ck="164778995260457" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="5582947192412673156" xil_pn:start_ts="1562300119">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
+    </transform>
+    <transform xil_pn:end_ts="1562301643" xil_pn:in_ck="8874822899360144128" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416187" xil_pn:start_ts="1562301638">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <outfile xil_pn:name="reloj.twr"/>
+      <outfile xil_pn:name="reloj.twx"/>
+    </transform>
+  </transforms>
+
+</generated_project>

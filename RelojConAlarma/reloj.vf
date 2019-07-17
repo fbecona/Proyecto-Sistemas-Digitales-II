@@ -1,0 +1,2113 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : reloj.vf
+// /___/   /\     Timestamp : 07/05/2019 01:39:48
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog C:/Users/estudiante.fit/Desktop/ProyectoFinalSistemasConAlarmaBIEN/ProyectoFinalSd2/reloj.vf -w C:/Users/estudiante.fit/Desktop/ProyectoFinalSistemasConAlarmaBIEN/ProyectoFinalSd2/reloj.sch
+//Design Name: reloj
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module FTRSE_MXILINX_reloj(C, 
+                           CE, 
+                           R, 
+                           S, 
+                           T, 
+                           Q);
+
+   parameter INIT = 1'b0;
+   
+    input C;
+    input CE;
+    input R;
+    input S;
+    input T;
+   output Q;
+   
+   wire CE_S;
+   wire D_S;
+   wire TQ;
+   wire Q_DUMMY;
+   
+   assign Q = Q_DUMMY;
+   XOR2  I_36_32 (.I0(T), 
+                 .I1(Q_DUMMY), 
+                 .O(TQ));
+   (* RLOC = "X0Y0" *) 
+   FDRE  I_36_35 (.C(C), 
+                 .CE(CE_S), 
+                 .D(D_S), 
+                 .R(R), 
+                 .Q(Q_DUMMY));
+   OR2  I_36_73 (.I0(S), 
+                .I1(TQ), 
+                .O(D_S));
+   OR2  I_36_77 (.I0(CE), 
+                .I1(S), 
+                .O(CE_S));
+endmodule
+`timescale 1ns / 1ps
+
+module CB4RE_MXILINX_reloj(C, 
+                           CE, 
+                           R, 
+                           CEO, 
+                           Q0, 
+                           Q1, 
+                           Q2, 
+                           Q3, 
+                           TC);
+
+    input C;
+    input CE;
+    input R;
+   output CEO;
+   output Q0;
+   output Q1;
+   output Q2;
+   output Q3;
+   output TC;
+   
+   wire T2;
+   wire T3;
+   wire XLXN_1;
+   wire XLXN_2;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire Q2_DUMMY;
+   wire Q3_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   assign Q2 = Q2_DUMMY;
+   assign Q3 = Q3_DUMMY;
+   assign TC = TC_DUMMY;
+   (* HU_SET = "I_Q0_65" *) 
+   FTRSE_MXILINX_reloj #( .INIT(1'b0) ) I_Q0 (.C(C), 
+                             .CE(CE), 
+                             .R(R), 
+                             .S(XLXN_2), 
+                             .T(XLXN_1), 
+                             .Q(Q0_DUMMY));
+   (* HU_SET = "I_Q1_66" *) 
+   FTRSE_MXILINX_reloj #( .INIT(1'b0) ) I_Q1 (.C(C), 
+                             .CE(CE), 
+                             .R(R), 
+                             .S(XLXN_2), 
+                             .T(Q0_DUMMY), 
+                             .Q(Q1_DUMMY));
+   (* HU_SET = "I_Q2_67" *) 
+   FTRSE_MXILINX_reloj #( .INIT(1'b0) ) I_Q2 (.C(C), 
+                             .CE(CE), 
+                             .R(R), 
+                             .S(XLXN_2), 
+                             .T(T2), 
+                             .Q(Q2_DUMMY));
+   (* HU_SET = "I_Q3_68" *) 
+   FTRSE_MXILINX_reloj #( .INIT(1'b0) ) I_Q3 (.C(C), 
+                             .CE(CE), 
+                             .R(R), 
+                             .S(XLXN_2), 
+                             .T(T3), 
+                             .Q(Q3_DUMMY));
+   AND4  I_36_31 (.I0(Q3_DUMMY), 
+                 .I1(Q2_DUMMY), 
+                 .I2(Q1_DUMMY), 
+                 .I3(Q0_DUMMY), 
+                 .O(TC_DUMMY));
+   AND3  I_36_32 (.I0(Q2_DUMMY), 
+                 .I1(Q1_DUMMY), 
+                 .I2(Q0_DUMMY), 
+                 .O(T3));
+   AND2  I_36_33 (.I0(Q1_DUMMY), 
+                 .I1(Q0_DUMMY), 
+                 .O(T2));
+   VCC  I_36_58 (.P(XLXN_1));
+   GND  I_36_64 (.G(XLXN_2));
+   AND2  I_36_69 (.I0(CE), 
+                 .I1(TC_DUMMY), 
+                 .O(CEO));
+endmodule
+`timescale 1ns / 1ps
+
+module Contador6Minuto_MUSER_reloj(C, 
+                                   C5);
+
+    input C;
+   output C5;
+   
+   wire XLXN_3;
+   wire XLXN_5;
+   wire XLXN_16;
+   wire XLXN_18;
+   wire XLXN_19;
+   wire XLXN_20;
+   wire XLXN_21;
+   wire XLXN_22;
+   wire XLXN_23;
+   wire C5_DUMMY;
+   
+   assign C5 = C5_DUMMY;
+   (* HU_SET = "XLXI_1_69" *) 
+   CB4RE_MXILINX_reloj  XLXI_1 (.C(C), 
+                               .CE(XLXN_22), 
+                               .R(C5_DUMMY), 
+                               .CEO(), 
+                               .Q0(XLXN_23), 
+                               .Q1(XLXN_21), 
+                               .Q2(XLXN_16), 
+                               .Q3(XLXN_18), 
+                               .TC());
+   AND2  XLXI_2 (.I0(XLXN_20), 
+                .I1(XLXN_23), 
+                .O(XLXN_3));
+   AND2  XLXI_3 (.I0(XLXN_19), 
+                .I1(XLXN_16), 
+                .O(XLXN_5));
+   AND2  XLXI_4 (.I0(XLXN_5), 
+                .I1(XLXN_3), 
+                .O(C5_DUMMY));
+   INV  XLXI_14 (.I(XLXN_21), 
+                .O(XLXN_20));
+   INV  XLXI_15 (.I(XLXN_18), 
+                .O(XLXN_19));
+   VCC  XLXI_16 (.P(XLXN_22));
+endmodule
+`timescale 1ns / 1ps
+
+module contador10_MUSER_reloj(C, 
+                              E, 
+                              C10, 
+                              Q0, 
+                              Q1, 
+                              Q2, 
+                              Q3);
+
+    input C;
+    input E;
+   output C10;
+   output Q0;
+   output Q1;
+   output Q2;
+   output Q3;
+   
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_20;
+   wire XLXN_42;
+   wire C10_DUMMY;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire Q2_DUMMY;
+   wire Q3_DUMMY;
+   
+   assign C10 = C10_DUMMY;
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   assign Q2 = Q2_DUMMY;
+   assign Q3 = Q3_DUMMY;
+   (* HU_SET = "XLXI_1_70" *) 
+   CB4RE_MXILINX_reloj  XLXI_1 (.C(C), 
+                               .CE(E), 
+                               .R(C10_DUMMY), 
+                               .CEO(), 
+                               .Q0(Q0_DUMMY), 
+                               .Q1(Q1_DUMMY), 
+                               .Q2(Q2_DUMMY), 
+                               .Q3(Q3_DUMMY), 
+                               .TC());
+   AND2  XLXI_2 (.I0(XLXN_20), 
+                .I1(Q0_DUMMY), 
+                .O(XLXN_3));
+   AND2  XLXI_3 (.I0(Q3_DUMMY), 
+                .I1(XLXN_42), 
+                .O(XLXN_4));
+   AND2  XLXI_4 (.I0(XLXN_4), 
+                .I1(XLXN_3), 
+                .O(C10_DUMMY));
+   INV  XLXI_14 (.I(Q1_DUMMY), 
+                .O(XLXN_20));
+   INV  XLXI_24 (.I(Q2_DUMMY), 
+                .O(XLXN_42));
+endmodule
+`timescale 1ns / 1ps
+
+module contador5_MUSER_reloj(C, 
+                             C5);
+
+    input C;
+   output C5;
+   
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_16;
+   wire XLXN_18;
+   wire XLXN_19;
+   wire XLXN_20;
+   wire XLXN_21;
+   wire XLXN_22;
+   wire XLXN_23;
+   wire XLXN_24;
+   wire C5_DUMMY;
+   
+   assign C5 = C5_DUMMY;
+   (* HU_SET = "XLXI_1_71" *) 
+   CB4RE_MXILINX_reloj  XLXI_1 (.C(C), 
+                               .CE(XLXN_22), 
+                               .R(C5_DUMMY), 
+                               .CEO(), 
+                               .Q0(XLXN_23), 
+                               .Q1(XLXN_21), 
+                               .Q2(XLXN_16), 
+                               .Q3(XLXN_18), 
+                               .TC());
+   AND2  XLXI_2 (.I0(XLXN_20), 
+                .I1(XLXN_24), 
+                .O(XLXN_3));
+   AND2  XLXI_3 (.I0(XLXN_19), 
+                .I1(XLXN_16), 
+                .O(XLXN_4));
+   AND2  XLXI_4 (.I0(XLXN_4), 
+                .I1(XLXN_3), 
+                .O(C5_DUMMY));
+   INV  XLXI_14 (.I(XLXN_21), 
+                .O(XLXN_20));
+   INV  XLXI_15 (.I(XLXN_18), 
+                .O(XLXN_19));
+   VCC  XLXI_16 (.P(XLXN_22));
+   INV  XLXI_17 (.I(XLXN_23), 
+                .O(XLXN_24));
+endmodule
+`timescale 1ns / 1ps
+
+module segundo_MUSER_reloj(C, 
+                           E, 
+                           seg);
+
+    input C;
+    input E;
+   output seg;
+   
+   wire XLXN_15;
+   wire XLXN_16;
+   wire XLXN_19;
+   wire XLXN_20;
+   wire XLXN_21;
+   wire XLXN_24;
+   wire XLXN_26;
+   wire XLXN_27;
+   wire XLXN_31;
+   wire XLXN_49;
+   wire XLXN_50;
+   wire XLXN_51;
+   wire XLXN_52;
+   
+   contador10_MUSER_reloj  XLXI_1 (.C(C), 
+                                  .E(E), 
+                                  .C10(XLXN_31), 
+                                  .Q0(), 
+                                  .Q1(), 
+                                  .Q2(), 
+                                  .Q3());
+   contador5_MUSER_reloj  XLXI_7 (.C(XLXN_21), 
+                                 .C5(seg));
+   contador10_MUSER_reloj  XLXI_9 (.C(XLXN_31), 
+                                  .E(XLXN_49), 
+                                  .C10(XLXN_15), 
+                                  .Q0(), 
+                                  .Q1(), 
+                                  .Q2(), 
+                                  .Q3());
+   contador10_MUSER_reloj  XLXI_10 (.C(XLXN_15), 
+                                   .E(XLXN_52), 
+                                   .C10(XLXN_16), 
+                                   .Q0(), 
+                                   .Q1(), 
+                                   .Q2(), 
+                                   .Q3());
+   contador10_MUSER_reloj  XLXI_11 (.C(XLXN_16), 
+                                   .E(XLXN_27), 
+                                   .C10(XLXN_24), 
+                                   .Q0(), 
+                                   .Q1(), 
+                                   .Q2(), 
+                                   .Q3());
+   contador10_MUSER_reloj  XLXI_12 (.C(XLXN_24), 
+                                   .E(XLXN_50), 
+                                   .C10(XLXN_19), 
+                                   .Q0(), 
+                                   .Q1(), 
+                                   .Q2(), 
+                                   .Q3());
+   contador10_MUSER_reloj  XLXI_13 (.C(XLXN_19), 
+                                   .E(XLXN_51), 
+                                   .C10(XLXN_20), 
+                                   .Q0(), 
+                                   .Q1(), 
+                                   .Q2(), 
+                                   .Q3());
+   contador10_MUSER_reloj  XLXI_14 (.C(XLXN_20), 
+                                   .E(XLXN_26), 
+                                   .C10(XLXN_21), 
+                                   .Q0(), 
+                                   .Q1(), 
+                                   .Q2(), 
+                                   .Q3());
+   VCC  XLXI_15 (.P(XLXN_26));
+   VCC  XLXI_16 (.P(XLXN_27));
+   VCC  XLXI_21 (.P(XLXN_49));
+   VCC  XLXI_22 (.P(XLXN_50));
+   VCC  XLXI_23 (.P(XLXN_51));
+   VCC  XLXI_24 (.P(XLXN_52));
+endmodule
+`timescale 1ns / 1ps
+
+module Minuto_MUSER_reloj(C, 
+                          M);
+
+    input C;
+   output M;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_5;
+   
+   segundo_MUSER_reloj  XLXI_1 (.C(C), 
+                               .E(XLXN_3), 
+                               .seg(XLXN_1));
+   contador10_MUSER_reloj  XLXI_3 (.C(XLXN_1), 
+                                  .E(XLXN_2), 
+                                  .C10(XLXN_5), 
+                                  .Q0(), 
+                                  .Q1(), 
+                                  .Q2(), 
+                                  .Q3());
+   VCC  XLXI_4 (.P(XLXN_2));
+   VCC  XLXI_5 (.P(XLXN_3));
+   Contador6Minuto_MUSER_reloj  XLXI_6 (.C(XLXN_5), 
+                                       .C5(M));
+endmodule
+`timescale 1ns / 1ps
+
+module FTCE_MXILINX_reloj(C, 
+                          CE, 
+                          CLR, 
+                          T, 
+                          Q);
+
+   parameter INIT = 1'b0;
+   
+    input C;
+    input CE;
+    input CLR;
+    input T;
+   output Q;
+   
+   wire TQ;
+   wire Q_DUMMY;
+   
+   assign Q = Q_DUMMY;
+   XOR2  I_36_32 (.I0(T), 
+                 .I1(Q_DUMMY), 
+                 .O(TQ));
+   (* RLOC = "X0Y0" *) 
+   FDCE  I_36_35 (.C(C), 
+                 .CE(CE), 
+                 .CLR(CLR), 
+                 .D(TQ), 
+                 .Q(Q_DUMMY));
+endmodule
+`timescale 1ns / 1ps
+
+module COMP16_MXILINX_reloj(A, 
+                            B, 
+                            EQ);
+
+    input [15:0] A;
+    input [15:0] B;
+   output EQ;
+   
+   wire ABCF;
+   wire AB0;
+   wire AB1;
+   wire AB2;
+   wire AB3;
+   wire AB4;
+   wire AB5;
+   wire AB6;
+   wire AB7;
+   wire AB8;
+   wire AB8B;
+   wire AB9;
+   wire AB03;
+   wire AB10;
+   wire AB11;
+   wire AB12;
+   wire AB13;
+   wire AB14;
+   wire AB15;
+   wire AB47;
+   
+   AND4  I_36_31 (.I0(ABCF), 
+                 .I1(AB8B), 
+                 .I2(AB47), 
+                 .I3(AB03), 
+                 .O(EQ));
+   XNOR2  I_36_40 (.I0(B[1]), 
+                  .I1(A[1]), 
+                  .O(AB1));
+   XNOR2  I_36_41 (.I0(B[0]), 
+                  .I1(A[0]), 
+                  .O(AB0));
+   XNOR2  I_36_54 (.I0(B[2]), 
+                  .I1(A[2]), 
+                  .O(AB2));
+   XNOR2  I_36_55 (.I0(B[3]), 
+                  .I1(A[3]), 
+                  .O(AB3));
+   XNOR2  I_36_56 (.I0(B[4]), 
+                  .I1(A[4]), 
+                  .O(AB4));
+   XNOR2  I_36_57 (.I0(B[5]), 
+                  .I1(A[5]), 
+                  .O(AB5));
+   XNOR2  I_36_58 (.I0(B[6]), 
+                  .I1(A[6]), 
+                  .O(AB6));
+   XNOR2  I_36_59 (.I0(B[7]), 
+                  .I1(A[7]), 
+                  .O(AB7));
+   XNOR2  I_36_60 (.I0(B[8]), 
+                  .I1(A[8]), 
+                  .O(AB8));
+   XNOR2  I_36_61 (.I0(B[9]), 
+                  .I1(A[9]), 
+                  .O(AB9));
+   XNOR2  I_36_62 (.I0(B[10]), 
+                  .I1(A[10]), 
+                  .O(AB10));
+   XNOR2  I_36_63 (.I0(B[11]), 
+                  .I1(A[11]), 
+                  .O(AB11));
+   XNOR2  I_36_64 (.I0(B[12]), 
+                  .I1(A[12]), 
+                  .O(AB12));
+   XNOR2  I_36_65 (.I0(B[13]), 
+                  .I1(A[13]), 
+                  .O(AB13));
+   XNOR2  I_36_66 (.I0(B[14]), 
+                  .I1(A[14]), 
+                  .O(AB14));
+   XNOR2  I_36_67 (.I0(B[15]), 
+                  .I1(A[15]), 
+                  .O(AB15));
+   AND4  I_36_68 (.I0(AB7), 
+                 .I1(AB6), 
+                 .I2(AB5), 
+                 .I3(AB4), 
+                 .O(AB47));
+   AND4  I_36_69 (.I0(AB11), 
+                 .I1(AB10), 
+                 .I2(AB9), 
+                 .I3(AB8), 
+                 .O(AB8B));
+   AND4  I_36_70 (.I0(AB15), 
+                 .I1(AB14), 
+                 .I2(AB13), 
+                 .I3(AB12), 
+                 .O(ABCF));
+   AND4  I_36_71 (.I0(AB3), 
+                 .I1(AB2), 
+                 .I2(AB1), 
+                 .I3(AB0), 
+                 .O(AB03));
+endmodule
+`timescale 1ns / 1ps
+
+module FD16CE_MXILINX_reloj(C, 
+                            CE, 
+                            CLR, 
+                            D, 
+                            Q);
+
+    input C;
+    input CE;
+    input CLR;
+    input [15:0] D;
+   output [15:0] Q;
+   
+   
+   FDCE #( .INIT(1'b0) ) I_Q0 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[0]), 
+              .Q(Q[0]));
+   FDCE #( .INIT(1'b0) ) I_Q1 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[1]), 
+              .Q(Q[1]));
+   FDCE #( .INIT(1'b0) ) I_Q2 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[2]), 
+              .Q(Q[2]));
+   FDCE #( .INIT(1'b0) ) I_Q3 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[3]), 
+              .Q(Q[3]));
+   FDCE #( .INIT(1'b0) ) I_Q4 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[4]), 
+              .Q(Q[4]));
+   FDCE #( .INIT(1'b0) ) I_Q5 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[5]), 
+              .Q(Q[5]));
+   FDCE #( .INIT(1'b0) ) I_Q6 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[6]), 
+              .Q(Q[6]));
+   FDCE #( .INIT(1'b0) ) I_Q7 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[7]), 
+              .Q(Q[7]));
+   FDCE #( .INIT(1'b0) ) I_Q8 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[8]), 
+              .Q(Q[8]));
+   FDCE #( .INIT(1'b0) ) I_Q9 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[9]), 
+              .Q(Q[9]));
+   FDCE #( .INIT(1'b0) ) I_Q10 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[10]), 
+               .Q(Q[10]));
+   FDCE #( .INIT(1'b0) ) I_Q11 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[11]), 
+               .Q(Q[11]));
+   FDCE #( .INIT(1'b0) ) I_Q12 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[12]), 
+               .Q(Q[12]));
+   FDCE #( .INIT(1'b0) ) I_Q13 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[13]), 
+               .Q(Q[13]));
+   FDCE #( .INIT(1'b0) ) I_Q14 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[14]), 
+               .Q(Q[14]));
+   FDCE #( .INIT(1'b0) ) I_Q15 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[15]), 
+               .Q(Q[15]));
+endmodule
+`timescale 1ns / 1ps
+
+module Alarma_MUSER_reloj(C, 
+                          CE, 
+                          E, 
+                          ESET, 
+                          Hora, 
+                          A);
+
+    input C;
+    input CE;
+    input E;
+    input ESET;
+    input [15:0] Hora;
+   output A;
+   
+   wire L;
+   wire [15:0] XLXN_2;
+   wire XLXN_8;
+   wire XLXN_10;
+   wire XLXN_17;
+   wire XLXN_19;
+   
+   (* HU_SET = "XLXI_1_72" *) 
+   FD16CE_MXILINX_reloj  XLXI_1 (.C(C), 
+                                .CE(CE), 
+                                .CLR(), 
+                                .D(Hora[15:0]), 
+                                .Q(XLXN_2[15:0]));
+   (* HU_SET = "XLXI_2_73" *) 
+   COMP16_MXILINX_reloj  XLXI_2 (.A(XLXN_2[15:0]), 
+                                .B(Hora[15:0]), 
+                                .EQ(L));
+   (* HU_SET = "XLXI_5_74" *) 
+   FTCE_MXILINX_reloj #( .INIT(1'b0) ) XLXI_5 (.C(C), 
+                              .CE(XLXN_19), 
+                              .CLR(), 
+                              .T(XLXN_10), 
+                              .Q(XLXN_17));
+   segundo_MUSER_reloj  XLXI_6 (.C(C), 
+                               .E(XLXN_8), 
+                               .seg(XLXN_10));
+   VCC  XLXI_7 (.P(XLXN_8));
+   AND4  XLXI_8 (.I0(XLXN_17), 
+                .I1(ESET), 
+                .I2(E), 
+                .I3(L), 
+                .O(A));
+   VCC  XLXI_9 (.P(XLXN_19));
+endmodule
+`timescale 1ns / 1ps
+
+module CB4CE_MXILINX_reloj(C, 
+                           CE, 
+                           CLR, 
+                           CEO, 
+                           Q0, 
+                           Q1, 
+                           Q2, 
+                           Q3, 
+                           TC);
+
+    input C;
+    input CE;
+    input CLR;
+   output CEO;
+   output Q0;
+   output Q1;
+   output Q2;
+   output Q3;
+   output TC;
+   
+   wire T2;
+   wire T3;
+   wire XLXN_1;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire Q2_DUMMY;
+   wire Q3_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   assign Q2 = Q2_DUMMY;
+   assign Q3 = Q3_DUMMY;
+   assign TC = TC_DUMMY;
+   (* HU_SET = "I_Q0_75" *) 
+   FTCE_MXILINX_reloj #( .INIT(1'b0) ) I_Q0 (.C(C), 
+                            .CE(CE), 
+                            .CLR(CLR), 
+                            .T(XLXN_1), 
+                            .Q(Q0_DUMMY));
+   (* HU_SET = "I_Q1_76" *) 
+   FTCE_MXILINX_reloj #( .INIT(1'b0) ) I_Q1 (.C(C), 
+                            .CE(CE), 
+                            .CLR(CLR), 
+                            .T(Q0_DUMMY), 
+                            .Q(Q1_DUMMY));
+   (* HU_SET = "I_Q2_77" *) 
+   FTCE_MXILINX_reloj #( .INIT(1'b0) ) I_Q2 (.C(C), 
+                            .CE(CE), 
+                            .CLR(CLR), 
+                            .T(T2), 
+                            .Q(Q2_DUMMY));
+   (* HU_SET = "I_Q3_78" *) 
+   FTCE_MXILINX_reloj #( .INIT(1'b0) ) I_Q3 (.C(C), 
+                            .CE(CE), 
+                            .CLR(CLR), 
+                            .T(T3), 
+                            .Q(Q3_DUMMY));
+   AND4  I_36_31 (.I0(Q3_DUMMY), 
+                 .I1(Q2_DUMMY), 
+                 .I2(Q1_DUMMY), 
+                 .I3(Q0_DUMMY), 
+                 .O(TC_DUMMY));
+   AND3  I_36_32 (.I0(Q2_DUMMY), 
+                 .I1(Q1_DUMMY), 
+                 .I2(Q0_DUMMY), 
+                 .O(T3));
+   AND2  I_36_33 (.I0(Q1_DUMMY), 
+                 .I1(Q0_DUMMY), 
+                 .O(T2));
+   VCC  I_36_58 (.P(XLXN_1));
+   AND2  I_36_67 (.I0(CE), 
+                 .I1(TC_DUMMY), 
+                 .O(CEO));
+endmodule
+`timescale 1ns / 1ps
+
+module uHora_MUSER_reloj(C, 
+                         R, 
+                         C4, 
+                         C10, 
+                         Q0, 
+                         Q1, 
+                         Q2, 
+                         Q3);
+
+    input C;
+    input R;
+   output C4;
+   output C10;
+   output Q0;
+   output Q1;
+   output Q2;
+   output Q3;
+   
+   wire XLXN_67;
+   wire XLXN_69;
+   wire XLXN_70;
+   wire XLXN_72;
+   wire XLXN_76;
+   wire XLXN_77;
+   wire XLXN_79;
+   wire XLXN_80;
+   wire XLXN_82;
+   wire XLXN_83;
+   wire XLXN_84;
+   wire C10_DUMMY;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire Q2_DUMMY;
+   wire Q3_DUMMY;
+   
+   assign C10 = C10_DUMMY;
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   assign Q2 = Q2_DUMMY;
+   assign Q3 = Q3_DUMMY;
+   AND2  XLXI_2 (.I0(XLXN_72), 
+                .I1(XLXN_70), 
+                .O(C10_DUMMY));
+   AND2  XLXI_3 (.I0(Q1_DUMMY), 
+                .I1(XLXN_76), 
+                .O(XLXN_70));
+   AND2  XLXI_4 (.I0(Q3_DUMMY), 
+                .I1(XLXN_69), 
+                .O(XLXN_72));
+   VCC  XLXI_16 (.P(XLXN_67));
+   INV  XLXI_24 (.I(Q2_DUMMY), 
+                .O(XLXN_69));
+   INV  XLXI_25 (.I(Q0_DUMMY), 
+                .O(XLXN_76));
+   (* HU_SET = "XLXI_26_79" *) 
+   CB4CE_MXILINX_reloj  XLXI_26 (.C(C), 
+                                .CE(XLXN_67), 
+                                .CLR(XLXN_77), 
+                                .CEO(), 
+                                .Q0(Q0_DUMMY), 
+                                .Q1(Q1_DUMMY), 
+                                .Q2(Q2_DUMMY), 
+                                .Q3(Q3_DUMMY), 
+                                .TC());
+   OR2  XLXI_33 (.I0(C10_DUMMY), 
+                .I1(R), 
+                .O(XLXN_77));
+   AND2  XLXI_34 (.I0(XLXN_84), 
+                 .I1(XLXN_83), 
+                 .O(XLXN_79));
+   AND2  XLXI_35 (.I0(XLXN_82), 
+                 .I1(Q2_DUMMY), 
+                 .O(XLXN_80));
+   AND2  XLXI_36 (.I0(XLXN_80), 
+                 .I1(XLXN_79), 
+                 .O(C4));
+   INV  XLXI_40 (.I(Q3_DUMMY), 
+                .O(XLXN_82));
+   INV  XLXI_41 (.I(Q0_DUMMY), 
+                .O(XLXN_83));
+   INV  XLXI_42 (.I(Q1_DUMMY), 
+                .O(XLXN_84));
+endmodule
+`timescale 1ns / 1ps
+
+module CB16RE_MXILINX_reloj(C, 
+                            CE, 
+                            R, 
+                            CEO, 
+                            Q, 
+                            TC);
+
+    input C;
+    input CE;
+    input R;
+   output CEO;
+   output [15:0] Q;
+   output TC;
+   
+   wire T2;
+   wire T3;
+   wire T4;
+   wire T5;
+   wire T6;
+   wire T7;
+   wire T8;
+   wire T9;
+   wire T10;
+   wire T11;
+   wire T12;
+   wire T13;
+   wire T14;
+   wire T15;
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire [15:0] Q_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Q[15:0] = Q_DUMMY[15:0];
+   assign TC = TC_DUMMY;
+   (* HU_SET = "I_Q0_95" *) 
+   FTRSE_MXILINX_reloj #( .INIT(1'b0) ) I_Q0 (.C(C), 
+                             .CE(CE), 
+                             .R(R), 
+                             .S(XLXN_2), 
+                             .T(XLXN_1), 
+                             .Q(Q_DUMMY[0]));
+   (* HU_SET = "I_Q1_94" *) 
+   FTRSE_MXILINX_reloj #( .INIT(1'b0) ) I_Q1 (.C(C), 
+                             .CE(CE), 
+                             .R(R), 
+                             .S(XLXN_2), 
+                             .T(Q_DUMMY[0]), 
+                             .Q(Q_DUMMY[1]));
+   (* HU_SET = "I_Q2_93" *) 
+   FTRSE_MXILINX_reloj #( .INIT(1'b0) ) I_Q2 (.C(C), 
+                             .CE(CE), 
+                             .R(R), 
+                             .S(XLXN_2), 
+                             .T(T2), 
+                             .Q(Q_DUMMY[2]));
+   (* HU_SET = "I_Q3_92" *) 
+   FTRSE_MXILINX_reloj #( .INIT(1'b0) ) I_Q3 (.C(C), 
+                             .CE(CE), 
+                             .R(R), 
+                             .S(XLXN_2), 
+                             .T(T3), 
+                             .Q(Q_DUMMY[3]));
+   (* HU_SET = "I_Q4_91" *) 
+   FTRSE_MXILINX_reloj #( .INIT(1'b0) ) I_Q4 (.C(C), 
+                             .CE(CE), 
+                             .R(R), 
+                             .S(XLXN_2), 
+                             .T(T4), 
+                             .Q(Q_DUMMY[4]));
+   (* HU_SET = "I_Q5_90" *) 
+   FTRSE_MXILINX_reloj #( .INIT(1'b0) ) I_Q5 (.C(C), 
+                             .CE(CE), 
+                             .R(R), 
+                             .S(XLXN_2), 
+                             .T(T5), 
+                             .Q(Q_DUMMY[5]));
+   (* HU_SET = "I_Q6_89" *) 
+   FTRSE_MXILINX_reloj #( .INIT(1'b0) ) I_Q6 (.C(C), 
+                             .CE(CE), 
+                             .R(R), 
+                             .S(XLXN_2), 
+                             .T(T6), 
+                             .Q(Q_DUMMY[6]));
+   (* HU_SET = "I_Q7_88" *) 
+   FTRSE_MXILINX_reloj #( .INIT(1'b0) ) I_Q7 (.C(C), 
+                             .CE(CE), 
+                             .R(R), 
+                             .S(XLXN_2), 
+                             .T(T7), 
+                             .Q(Q_DUMMY[7]));
+   (* HU_SET = "I_Q8_80" *) 
+   FTRSE_MXILINX_reloj #( .INIT(1'b0) ) I_Q8 (.C(C), 
+                             .CE(CE), 
+                             .R(R), 
+                             .S(XLXN_3), 
+                             .T(T8), 
+                             .Q(Q_DUMMY[8]));
+   (* HU_SET = "I_Q9_81" *) 
+   FTRSE_MXILINX_reloj #( .INIT(1'b0) ) I_Q9 (.C(C), 
+                             .CE(CE), 
+                             .R(R), 
+                             .S(XLXN_3), 
+                             .T(T9), 
+                             .Q(Q_DUMMY[9]));
+   (* HU_SET = "I_Q10_82" *) 
+   FTRSE_MXILINX_reloj #( .INIT(1'b0) ) I_Q10 (.C(C), 
+                              .CE(CE), 
+                              .R(R), 
+                              .S(XLXN_3), 
+                              .T(T10), 
+                              .Q(Q_DUMMY[10]));
+   (* HU_SET = "I_Q11_83" *) 
+   FTRSE_MXILINX_reloj #( .INIT(1'b0) ) I_Q11 (.C(C), 
+                              .CE(CE), 
+                              .R(R), 
+                              .S(XLXN_3), 
+                              .T(T11), 
+                              .Q(Q_DUMMY[11]));
+   (* HU_SET = "I_Q12_84" *) 
+   FTRSE_MXILINX_reloj #( .INIT(1'b0) ) I_Q12 (.C(C), 
+                              .CE(CE), 
+                              .R(R), 
+                              .S(XLXN_3), 
+                              .T(T12), 
+                              .Q(Q_DUMMY[12]));
+   (* HU_SET = "I_Q13_85" *) 
+   FTRSE_MXILINX_reloj #( .INIT(1'b0) ) I_Q13 (.C(C), 
+                              .CE(CE), 
+                              .R(R), 
+                              .S(XLXN_3), 
+                              .T(T13), 
+                              .Q(Q_DUMMY[13]));
+   (* HU_SET = "I_Q14_86" *) 
+   FTRSE_MXILINX_reloj #( .INIT(1'b0) ) I_Q14 (.C(C), 
+                              .CE(CE), 
+                              .R(R), 
+                              .S(XLXN_3), 
+                              .T(T14), 
+                              .Q(Q_DUMMY[14]));
+   (* HU_SET = "I_Q15_87" *) 
+   FTRSE_MXILINX_reloj #( .INIT(1'b0) ) I_Q15 (.C(C), 
+                              .CE(CE), 
+                              .R(R), 
+                              .S(XLXN_3), 
+                              .T(T15), 
+                              .Q(Q_DUMMY[15]));
+   GND  I_36_1 (.G(XLXN_3));
+   GND  I_36_2 (.G(XLXN_2));
+   AND5  I_36_20 (.I0(Q_DUMMY[11]), 
+                 .I1(Q_DUMMY[10]), 
+                 .I2(Q_DUMMY[9]), 
+                 .I3(Q_DUMMY[8]), 
+                 .I4(T8), 
+                 .O(T12));
+   AND2  I_36_21 (.I0(Q_DUMMY[8]), 
+                 .I1(T8), 
+                 .O(T9));
+   AND3  I_36_22 (.I0(Q_DUMMY[9]), 
+                 .I1(Q_DUMMY[8]), 
+                 .I2(T8), 
+                 .O(T10));
+   AND4  I_36_23 (.I0(Q_DUMMY[10]), 
+                 .I1(Q_DUMMY[9]), 
+                 .I2(Q_DUMMY[8]), 
+                 .I3(T8), 
+                 .O(T11));
+   AND4  I_36_24 (.I0(Q_DUMMY[14]), 
+                 .I1(Q_DUMMY[13]), 
+                 .I2(Q_DUMMY[12]), 
+                 .I3(T12), 
+                 .O(T15));
+   AND3  I_36_25 (.I0(Q_DUMMY[13]), 
+                 .I1(Q_DUMMY[12]), 
+                 .I2(T12), 
+                 .O(T14));
+   AND2  I_36_26 (.I0(Q_DUMMY[12]), 
+                 .I1(T12), 
+                 .O(T13));
+   AND5  I_36_27 (.I0(Q_DUMMY[15]), 
+                 .I1(Q_DUMMY[14]), 
+                 .I2(Q_DUMMY[13]), 
+                 .I3(Q_DUMMY[12]), 
+                 .I4(T12), 
+                 .O(TC_DUMMY));
+   AND4  I_36_28 (.I0(Q_DUMMY[6]), 
+                 .I1(Q_DUMMY[5]), 
+                 .I2(Q_DUMMY[4]), 
+                 .I3(T4), 
+                 .O(T7));
+   AND3  I_36_29 (.I0(Q_DUMMY[5]), 
+                 .I1(Q_DUMMY[4]), 
+                 .I2(T4), 
+                 .O(T6));
+   AND2  I_36_30 (.I0(Q_DUMMY[4]), 
+                 .I1(T4), 
+                 .O(T5));
+   AND5  I_36_31 (.I0(Q_DUMMY[7]), 
+                 .I1(Q_DUMMY[6]), 
+                 .I2(Q_DUMMY[5]), 
+                 .I3(Q_DUMMY[4]), 
+                 .I4(T4), 
+                 .O(T8));
+   AND4  I_36_32 (.I0(Q_DUMMY[3]), 
+                 .I1(Q_DUMMY[2]), 
+                 .I2(Q_DUMMY[1]), 
+                 .I3(Q_DUMMY[0]), 
+                 .O(T4));
+   VCC  I_36_33 (.P(XLXN_1));
+   AND2  I_36_34 (.I0(Q_DUMMY[1]), 
+                 .I1(Q_DUMMY[0]), 
+                 .O(T2));
+   AND3  I_36_35 (.I0(Q_DUMMY[2]), 
+                 .I1(Q_DUMMY[1]), 
+                 .I2(Q_DUMMY[0]), 
+                 .O(T3));
+   AND2  I_36_58 (.I0(CE), 
+                 .I1(TC_DUMMY), 
+                 .O(CEO));
+endmodule
+`timescale 1ns / 1ps
+
+module CB2RE_MXILINX_reloj(C, 
+                           CE, 
+                           R, 
+                           CEO, 
+                           Q0, 
+                           Q1, 
+                           TC);
+
+    input C;
+    input CE;
+    input R;
+   output CEO;
+   output Q0;
+   output Q1;
+   output TC;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   assign TC = TC_DUMMY;
+   (* HU_SET = "I_Q0_96" *) 
+   FTRSE_MXILINX_reloj #( .INIT(1'b0) ) I_Q0 (.C(C), 
+                             .CE(CE), 
+                             .R(R), 
+                             .S(XLXN_2), 
+                             .T(XLXN_1), 
+                             .Q(Q0_DUMMY));
+   (* HU_SET = "I_Q1_97" *) 
+   FTRSE_MXILINX_reloj #( .INIT(1'b0) ) I_Q1 (.C(C), 
+                             .CE(CE), 
+                             .R(R), 
+                             .S(XLXN_2), 
+                             .T(Q0_DUMMY), 
+                             .Q(Q1_DUMMY));
+   AND2  I_36_37 (.I0(Q1_DUMMY), 
+                 .I1(Q0_DUMMY), 
+                 .O(TC_DUMMY));
+   VCC  I_36_47 (.P(XLXN_1));
+   GND  I_36_54 (.G(XLXN_2));
+   AND2  I_36_55 (.I0(CE), 
+                 .I1(TC_DUMMY), 
+                 .O(CEO));
+endmodule
+`timescale 1ns / 1ps
+
+module D2_4E_MXILINX_reloj(A0, 
+                           A1, 
+                           E, 
+                           D0, 
+                           D1, 
+                           D2, 
+                           D3);
+
+    input A0;
+    input A1;
+    input E;
+   output D0;
+   output D1;
+   output D2;
+   output D3;
+   
+   
+   AND3  I_36_30 (.I0(A1), 
+                 .I1(A0), 
+                 .I2(E), 
+                 .O(D3));
+   AND3B1  I_36_31 (.I0(A0), 
+                   .I1(A1), 
+                   .I2(E), 
+                   .O(D2));
+   AND3B1  I_36_32 (.I0(A1), 
+                   .I1(A0), 
+                   .I2(E), 
+                   .O(D1));
+   AND3B2  I_36_33 (.I0(A0), 
+                   .I1(A1), 
+                   .I2(E), 
+                   .O(D0));
+endmodule
+`timescale 1ns / 1ps
+
+module M2_1E_MXILINX_reloj(D0, 
+                           D1, 
+                           E, 
+                           S0, 
+                           O);
+
+    input D0;
+    input D1;
+    input E;
+    input S0;
+   output O;
+   
+   wire M0;
+   wire M1;
+   
+   AND3  I_36_30 (.I0(D1), 
+                 .I1(E), 
+                 .I2(S0), 
+                 .O(M1));
+   AND3B1  I_36_31 (.I0(S0), 
+                   .I1(E), 
+                   .I2(D0), 
+                   .O(M0));
+   OR2  I_36_38 (.I0(M1), 
+                .I1(M0), 
+                .O(O));
+endmodule
+`timescale 1ns / 1ps
+
+module M4_1E_MXILINX_reloj(D0, 
+                           D1, 
+                           D2, 
+                           D3, 
+                           E, 
+                           S0, 
+                           S1, 
+                           O);
+
+    input D0;
+    input D1;
+    input D2;
+    input D3;
+    input E;
+    input S0;
+    input S1;
+   output O;
+   
+   wire M01;
+   wire M23;
+   
+   (* HU_SET = "I_M01_99" *) 
+   M2_1E_MXILINX_reloj  I_M01 (.D0(D0), 
+                              .D1(D1), 
+                              .E(E), 
+                              .S0(S0), 
+                              .O(M01));
+   (* HU_SET = "I_M23_98" *) 
+   M2_1E_MXILINX_reloj  I_M23 (.D0(D2), 
+                              .D1(D3), 
+                              .E(E), 
+                              .S0(S0), 
+                              .O(M23));
+   MUXF5  I_O (.I0(M01), 
+              .I1(M23), 
+              .S(S1), 
+              .O(O));
+endmodule
+`timescale 1ns / 1ps
+
+module Segmento6_MUSER_reloj(IN0, 
+                             IN1, 
+                             IN2, 
+                             IN3, 
+                             OUT6);
+
+    input IN0;
+    input IN1;
+    input IN2;
+    input IN3;
+   output OUT6;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_20;
+   wire XLXN_23;
+   wire XLXN_24;
+   wire XLXN_27;
+   
+   AND4  XLXI_1 (.I0(XLXN_4), 
+                .I1(XLXN_3), 
+                .I2(XLXN_2), 
+                .I3(XLXN_1), 
+                .O(OUT6));
+   OR2  XLXI_2 (.I0(XLXN_20), 
+               .I1(IN2), 
+               .O(XLXN_2));
+   OR2  XLXI_3 (.I0(XLXN_27), 
+               .I1(IN2), 
+               .O(XLXN_1));
+   OR2  XLXI_4 (.I0(XLXN_23), 
+               .I1(IN0), 
+               .O(XLXN_3));
+   OR2  XLXI_5 (.I0(XLXN_24), 
+               .I1(IN1), 
+               .O(XLXN_4));
+   INV  XLXI_6 (.I(IN3), 
+               .O(XLXN_20));
+   INV  XLXI_7 (.I(IN1), 
+               .O(XLXN_23));
+   INV  XLXI_8 (.I(IN2), 
+               .O(XLXN_24));
+   INV  XLXI_10 (.I(IN1), 
+                .O(XLXN_27));
+endmodule
+`timescale 1ns / 1ps
+
+module Segmento5_MUSER_reloj(IN0, 
+                             IN1, 
+                             IN2, 
+                             IN3, 
+                             OUT5);
+
+    input IN0;
+    input IN1;
+    input IN2;
+    input IN3;
+   output OUT5;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_18;
+   wire XLXN_19;
+   wire XLXN_20;
+   
+   AND4  XLXI_1 (.I0(XLXN_4), 
+                .I1(XLXN_3), 
+                .I2(XLXN_2), 
+                .I3(XLXN_1), 
+                .O(OUT5));
+   OR2  XLXI_2 (.I0(XLXN_18), 
+               .I1(IN1), 
+               .O(XLXN_1));
+   OR2  XLXI_3 (.I0(IN0), 
+               .I1(IN1), 
+               .O(XLXN_2));
+   OR2  XLXI_4 (.I0(XLXN_19), 
+               .I1(IN2), 
+               .O(XLXN_3));
+   OR2  XLXI_5 (.I0(XLXN_20), 
+               .I1(IN0), 
+               .O(XLXN_4));
+   INV  XLXI_6 (.I(IN2), 
+               .O(XLXN_18));
+   INV  XLXI_7 (.I(IN3), 
+               .O(XLXN_19));
+   INV  XLXI_9 (.I(IN2), 
+               .O(XLXN_20));
+endmodule
+`timescale 1ns / 1ps
+
+module Segmento4_MUSER_reloj(IN0, 
+                             IN1, 
+                             IN2, 
+                             OUT4);
+
+    input IN0;
+    input IN1;
+    input IN2;
+   output OUT4;
+   
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_10;
+   
+   AND2  XLXI_1 (.I0(XLXN_3), 
+                .I1(XLXN_2), 
+                .O(OUT4));
+   OR2  XLXI_2 (.I0(XLXN_10), 
+               .I1(IN0), 
+               .O(XLXN_2));
+   OR2  XLXI_3 (.I0(IN0), 
+               .I1(IN2), 
+               .O(XLXN_3));
+   INV  XLXI_4 (.I(IN1), 
+               .O(XLXN_10));
+endmodule
+`timescale 1ns / 1ps
+
+module Segmento3_MUSER_reloj(IN0, 
+                             IN1, 
+                             IN2, 
+                             OUT3);
+
+    input IN0;
+    input IN1;
+    input IN2;
+   output OUT3;
+   
+   wire XLXN_43;
+   wire XLXN_44;
+   wire XLXN_49;
+   wire XLXN_51;
+   wire XLXN_53;
+   wire XLXN_54;
+   wire XLXN_55;
+   wire XLXN_56;
+   
+   INV  XLXI_1 (.I(IN2), 
+               .O(XLXN_44));
+   INV  XLXI_2 (.I(IN1), 
+               .O(XLXN_49));
+   AND4  XLXI_3 (.I0(XLXN_56), 
+                .I1(XLXN_55), 
+                .I2(XLXN_54), 
+                .I3(XLXN_53), 
+                .O(OUT3));
+   OR2  XLXI_4 (.I0(XLXN_49), 
+               .I1(IN0), 
+               .O(XLXN_55));
+   OR2  XLXI_8 (.I0(XLXN_51), 
+               .I1(IN2), 
+               .O(XLXN_56));
+   INV  XLXI_10 (.I(IN1), 
+                .O(XLXN_51));
+   INV  XLXI_11 (.I(IN0), 
+                .O(XLXN_43));
+   OR3  XLXI_12 (.I0(XLXN_44), 
+                .I1(XLXN_43), 
+                .I2(IN1), 
+                .O(XLXN_54));
+   OR2  XLXI_13 (.I0(IN2), 
+                .I1(IN0), 
+                .O(XLXN_53));
+endmodule
+`timescale 1ns / 1ps
+
+module Segmento2_MUSER_reloj(IN0, 
+                             IN1, 
+                             IN2, 
+                             IN3, 
+                             OUT2);
+
+    input IN0;
+    input IN1;
+    input IN2;
+    input IN3;
+   output OUT2;
+   
+   wire XLXN_43;
+   wire XLXN_44;
+   wire XLXN_45;
+   wire XLXN_47;
+   wire XLXN_54;
+   
+   OR2  XLXI_4 (.I0(XLXN_54), 
+               .I1(IN3), 
+               .O(XLXN_43));
+   OR2  XLXI_8 (.I0(IN1), 
+               .I1(IN2), 
+               .O(XLXN_45));
+   INV  XLXI_10 (.I(IN2), 
+                .O(XLXN_54));
+   INV  XLXI_11 (.I(IN0), 
+                .O(XLXN_47));
+   AND3  XLXI_12 (.I0(XLXN_45), 
+                 .I1(XLXN_43), 
+                 .I2(XLXN_44), 
+                 .O(OUT2));
+   OR2  XLXI_13 (.I0(IN3), 
+                .I1(XLXN_47), 
+                .O(XLXN_44));
+endmodule
+`timescale 1ns / 1ps
+
+module Segmento1_MUSER_reloj(IN0, 
+                             IN1, 
+                             IN2, 
+                             OUT1);
+
+    input IN0;
+    input IN1;
+    input IN2;
+   output OUT1;
+   
+   wire XLXN_14;
+   wire XLXN_15;
+   wire XLXN_20;
+   wire XLXN_28;
+   
+   AND3  XLXI_1 (.I0(XLXN_15), 
+                .I1(XLXN_14), 
+                .I2(IN2), 
+                .O(OUT1));
+   OR2  XLXI_2 (.I0(IN0), 
+               .I1(IN1), 
+               .O(XLXN_14));
+   OR2  XLXI_3 (.I0(XLXN_20), 
+               .I1(XLXN_28), 
+               .O(XLXN_15));
+   INV  XLXI_4 (.I(IN0), 
+               .O(XLXN_20));
+   INV  XLXI_5 (.I(IN1), 
+               .O(XLXN_28));
+endmodule
+`timescale 1ns / 1ps
+
+module Segmento0_MUSER_reloj(IN0, 
+                             IN1, 
+                             IN2, 
+                             IN3, 
+                             OUT0);
+
+    input IN0;
+    input IN1;
+    input IN2;
+    input IN3;
+   output OUT0;
+   
+   wire XLXN_16;
+   wire XLXN_17;
+   wire XLXN_21;
+   wire XLXN_34;
+   wire XLXN_36;
+   wire XLXN_39;
+   
+   INV  XLXI_4 (.I(IN0), 
+               .O(XLXN_21));
+   INV  XLXI_5 (.I(IN2), 
+               .O(XLXN_34));
+   AND4  XLXI_6 (.I0(XLXN_17), 
+                .I1(XLXN_16), 
+                .I2(XLXN_39), 
+                .I3(XLXN_36), 
+                .O(OUT0));
+   OR2  XLXI_7 (.I0(XLXN_21), 
+               .I1(XLXN_34), 
+               .O(XLXN_16));
+   OR2  XLXI_8 (.I0(IN0), 
+               .I1(IN2), 
+               .O(XLXN_17));
+   INV  XLXI_10 (.I(IN1), 
+                .O(XLXN_39));
+   INV  XLXI_11 (.I(IN3), 
+                .O(XLXN_36));
+endmodule
+`timescale 1ns / 1ps
+
+module SieteSegmentos_MUSER_reloj(E0, 
+                                  E1, 
+                                  E2, 
+                                  E3, 
+                                  S0, 
+                                  S1, 
+                                  S2, 
+                                  S3, 
+                                  S4, 
+                                  S5, 
+                                  S6);
+
+    input E0;
+    input E1;
+    input E2;
+    input E3;
+   output S0;
+   output S1;
+   output S2;
+   output S3;
+   output S4;
+   output S5;
+   output S6;
+   
+   
+   Segmento0_MUSER_reloj  XLXI_1 (.IN0(E0), 
+                                 .IN1(E1), 
+                                 .IN2(E2), 
+                                 .IN3(E3), 
+                                 .OUT0(S0));
+   Segmento1_MUSER_reloj  XLXI_3 (.IN0(E0), 
+                                 .IN1(E1), 
+                                 .IN2(E2), 
+                                 .OUT1(S1));
+   Segmento2_MUSER_reloj  XLXI_4 (.IN0(E0), 
+                                 .IN1(E1), 
+                                 .IN2(E2), 
+                                 .IN3(E3), 
+                                 .OUT2(S2));
+   Segmento3_MUSER_reloj  XLXI_5 (.IN0(E0), 
+                                 .IN1(E1), 
+                                 .IN2(E2), 
+                                 .OUT3(S3));
+   Segmento4_MUSER_reloj  XLXI_6 (.IN0(E0), 
+                                 .IN1(E1), 
+                                 .IN2(E2), 
+                                 .OUT4(S4));
+   Segmento5_MUSER_reloj  XLXI_7 (.IN0(E0), 
+                                 .IN1(E1), 
+                                 .IN2(E2), 
+                                 .IN3(E3), 
+                                 .OUT5(S5));
+   Segmento6_MUSER_reloj  XLXI_26 (.IN0(E0), 
+                                  .IN1(E1), 
+                                  .IN2(E2), 
+                                  .IN3(E3), 
+                                  .OUT6(S6));
+endmodule
+`timescale 1ns / 1ps
+
+module Circuito_MUSER_reloj(C, 
+                            HD0, 
+                            HD1, 
+                            HD2, 
+                            HD3, 
+                            HU0, 
+                            HU1, 
+                            HU2, 
+                            HU3, 
+                            MD0, 
+                            MD1, 
+                            MD2, 
+                            MD3, 
+                            MU0, 
+                            MU1, 
+                            MU2, 
+                            MU3, 
+                            AN0, 
+                            AN1, 
+                            AN2, 
+                            AN3, 
+                            S0, 
+                            S1, 
+                            S2, 
+                            S3, 
+                            S4, 
+                            S5, 
+                            S6);
+
+    input C;
+    input HD0;
+    input HD1;
+    input HD2;
+    input HD3;
+    input HU0;
+    input HU1;
+    input HU2;
+    input HU3;
+    input MD0;
+    input MD1;
+    input MD2;
+    input MD3;
+    input MU0;
+    input MU1;
+    input MU2;
+    input MU3;
+   output AN0;
+   output AN1;
+   output AN2;
+   output AN3;
+   output S0;
+   output S1;
+   output S2;
+   output S3;
+   output S4;
+   output S5;
+   output S6;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_128;
+   wire XLXN_145;
+   wire XLXN_216;
+   wire XLXN_217;
+   wire XLXN_218;
+   wire XLXN_219;
+   wire XLXN_234;
+   wire XLXN_235;
+   wire XLXN_246;
+   wire XLXN_263;
+   wire XLXN_264;
+   
+   (* HU_SET = "XLXI_2_100" *) 
+   M4_1E_MXILINX_reloj  XLXI_2 (.D0(HD1), 
+                               .D1(MD1), 
+                               .D2(HU1), 
+                               .D3(MU1), 
+                               .E(XLXN_128), 
+                               .S0(XLXN_264), 
+                               .S1(XLXN_263), 
+                               .O(XLXN_1));
+   (* HU_SET = "XLXI_3_101" *) 
+   M4_1E_MXILINX_reloj  XLXI_3 (.D0(HD3), 
+                               .D1(MD3), 
+                               .D2(HU3), 
+                               .D3(MU3), 
+                               .E(XLXN_128), 
+                               .S0(XLXN_264), 
+                               .S1(XLXN_263), 
+                               .O(XLXN_2));
+   (* HU_SET = "XLXI_4_102" *) 
+   M4_1E_MXILINX_reloj  XLXI_4 (.D0(HD0), 
+                               .D1(MD0), 
+                               .D2(HU0), 
+                               .D3(MU0), 
+                               .E(XLXN_128), 
+                               .S0(XLXN_264), 
+                               .S1(XLXN_263), 
+                               .O(XLXN_3));
+   (* HU_SET = "XLXI_5_103" *) 
+   M4_1E_MXILINX_reloj  XLXI_5 (.D0(HD2), 
+                               .D1(MD2), 
+                               .D2(HU2), 
+                               .D3(MU2), 
+                               .E(XLXN_128), 
+                               .S0(XLXN_264), 
+                               .S1(XLXN_263), 
+                               .O(XLXN_4));
+   SieteSegmentos_MUSER_reloj  XLXI_6 (.E0(XLXN_3), 
+                                      .E1(XLXN_1), 
+                                      .E2(XLXN_4), 
+                                      .E3(XLXN_2), 
+                                      .S0(S0), 
+                                      .S1(S1), 
+                                      .S2(S2), 
+                                      .S3(S3), 
+                                      .S4(S4), 
+                                      .S5(S5), 
+                                      .S6(S6));
+   VCC  XLXI_54 (.P(XLXN_128));
+   INV  XLXI_75 (.I(XLXN_216), 
+                .O(AN0));
+   INV  XLXI_76 (.I(XLXN_217), 
+                .O(AN1));
+   INV  XLXI_77 (.I(XLXN_218), 
+                .O(AN2));
+   INV  XLXI_78 (.I(XLXN_219), 
+                .O(AN3));
+   (* HU_SET = "XLXI_81_105" *) 
+   CB2RE_MXILINX_reloj  XLXI_81 (.C(C), 
+                                .CE(XLXN_145), 
+                                .R(XLXN_246), 
+                                .CEO(), 
+                                .Q0(XLXN_263), 
+                                .Q1(XLXN_264), 
+                                .TC());
+   (* HU_SET = "XLXI_82_106" *) 
+   CB16RE_MXILINX_reloj  XLXI_82 (.C(C), 
+                                 .CE(XLXN_234), 
+                                 .R(XLXN_246), 
+                                 .CEO(XLXN_145), 
+                                 .Q(), 
+                                 .TC());
+   VCC  XLXI_90 (.P(XLXN_234));
+   (* HU_SET = "XLXI_91_104" *) 
+   D2_4E_MXILINX_reloj  XLXI_91 (.A0(XLXN_263), 
+                                .A1(XLXN_264), 
+                                .E(XLXN_235), 
+                                .D0(XLXN_216), 
+                                .D1(XLXN_217), 
+                                .D2(XLXN_218), 
+                                .D3(XLXN_219));
+   VCC  XLXI_93 (.P(XLXN_235));
+   GND  XLXI_95 (.G(XLXN_246));
+endmodule
+`timescale 1ns / 1ps
+
+module M2_1_MXILINX_reloj(D0, 
+                          D1, 
+                          S0, 
+                          O);
+
+    input D0;
+    input D1;
+    input S0;
+   output O;
+   
+   wire M0;
+   wire M1;
+   
+   AND2B1  I_36_7 (.I0(S0), 
+                  .I1(D0), 
+                  .O(M0));
+   OR2  I_36_8 (.I0(M1), 
+               .I1(M0), 
+               .O(O));
+   AND2  I_36_9 (.I0(D1), 
+                .I1(S0), 
+                .O(M1));
+endmodule
+`timescale 1ns / 1ps
+
+module CB2CE_MXILINX_reloj(C, 
+                           CE, 
+                           CLR, 
+                           CEO, 
+                           Q0, 
+                           Q1, 
+                           TC);
+
+    input C;
+    input CE;
+    input CLR;
+   output CEO;
+   output Q0;
+   output Q1;
+   output TC;
+   
+   wire XLXN_1;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   assign TC = TC_DUMMY;
+   (* HU_SET = "I_Q0_107" *) 
+   FTCE_MXILINX_reloj #( .INIT(1'b0) ) I_Q0 (.C(C), 
+                            .CE(CE), 
+                            .CLR(CLR), 
+                            .T(XLXN_1), 
+                            .Q(Q0_DUMMY));
+   (* HU_SET = "I_Q1_108" *) 
+   FTCE_MXILINX_reloj #( .INIT(1'b0) ) I_Q1 (.C(C), 
+                            .CE(CE), 
+                            .CLR(CLR), 
+                            .T(Q0_DUMMY), 
+                            .Q(Q1_DUMMY));
+   AND2  I_36_37 (.I0(Q1_DUMMY), 
+                 .I1(Q0_DUMMY), 
+                 .O(TC_DUMMY));
+   VCC  I_36_47 (.P(XLXN_1));
+   AND2  I_36_52 (.I0(CE), 
+                 .I1(TC_DUMMY), 
+                 .O(CEO));
+endmodule
+`timescale 1ns / 1ps
+
+module conta2_MUSER_reloj(C, 
+                          R, 
+                          C2, 
+                          Q0, 
+                          Q1);
+
+    input C;
+    input R;
+   output C2;
+   output Q0;
+   output Q1;
+   
+   wire XLXN_53;
+   wire XLXN_56;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire C2_DUMMY;
+   
+   assign C2 = C2_DUMMY;
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   (* HU_SET = "XLXI_32_109" *) 
+   CB2CE_MXILINX_reloj  XLXI_32 (.C(C), 
+                                .CE(XLXN_53), 
+                                .CLR(XLXN_56), 
+                                .CEO(), 
+                                .Q0(Q0_DUMMY), 
+                                .Q1(Q1_DUMMY), 
+                                .TC());
+   VCC  XLXI_33 (.P(XLXN_53));
+   AND2  XLXI_34 (.I0(Q1_DUMMY), 
+                 .I1(Q0_DUMMY), 
+                 .O(C2_DUMMY));
+   OR2  XLXI_35 (.I0(C2_DUMMY), 
+                .I1(R), 
+                .O(XLXN_56));
+endmodule
+`timescale 1ns / 1ps
+
+module conta10_MUSER_reloj(C, 
+                           CLR, 
+                           C10, 
+                           Q0, 
+                           Q1, 
+                           Q2, 
+                           Q3);
+
+    input C;
+    input CLR;
+   output C10;
+   output Q0;
+   output Q1;
+   output Q2;
+   output Q3;
+   
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_22;
+   wire XLXN_42;
+   wire XLXN_43;
+   wire XLXN_48;
+   wire C10_DUMMY;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire Q2_DUMMY;
+   wire Q3_DUMMY;
+   
+   assign C10 = C10_DUMMY;
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   assign Q2 = Q2_DUMMY;
+   assign Q3 = Q3_DUMMY;
+   AND2  XLXI_2 (.I0(Q1_DUMMY), 
+                .I1(XLXN_43), 
+                .O(XLXN_3));
+   AND2  XLXI_3 (.I0(XLXN_4), 
+                .I1(XLXN_3), 
+                .O(C10_DUMMY));
+   AND2  XLXI_5 (.I0(Q3_DUMMY), 
+                .I1(XLXN_42), 
+                .O(XLXN_4));
+   VCC  XLXI_16 (.P(XLXN_22));
+   INV  XLXI_24 (.I(Q2_DUMMY), 
+                .O(XLXN_42));
+   INV  XLXI_25 (.I(Q0_DUMMY), 
+                .O(XLXN_43));
+   (* HU_SET = "XLXI_26_110" *) 
+   CB4CE_MXILINX_reloj  XLXI_26 (.C(C), 
+                                .CE(XLXN_22), 
+                                .CLR(XLXN_48), 
+                                .CEO(), 
+                                .Q0(Q0_DUMMY), 
+                                .Q1(Q1_DUMMY), 
+                                .Q2(Q2_DUMMY), 
+                                .Q3(Q3_DUMMY), 
+                                .TC());
+   OR2  XLXI_27 (.I0(CLR), 
+                .I1(C10_DUMMY), 
+                .O(XLXN_48));
+endmodule
+`timescale 1ns / 1ps
+
+module contador6_MUSER_reloj(C, 
+                             C6, 
+                             Q0, 
+                             Q1, 
+                             Q2, 
+                             Q3);
+
+    input C;
+   output C6;
+   output Q0;
+   output Q1;
+   output Q2;
+   output Q3;
+   
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_18;
+   wire XLXN_43;
+   wire XLXN_46;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire Q2_DUMMY;
+   wire Q3_DUMMY;
+   wire C6_DUMMY;
+   
+   assign C6 = C6_DUMMY;
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   assign Q2 = Q2_DUMMY;
+   assign Q3 = Q3_DUMMY;
+   AND2  XLXI_2 (.I0(Q1_DUMMY), 
+                .I1(XLXN_46), 
+                .O(XLXN_3));
+   AND2  XLXI_3 (.I0(XLXN_43), 
+                .I1(Q2_DUMMY), 
+                .O(XLXN_4));
+   AND2  XLXI_4 (.I0(XLXN_4), 
+                .I1(XLXN_3), 
+                .O(C6_DUMMY));
+   VCC  XLXI_16 (.P(XLXN_18));
+   INV  XLXI_25 (.I(Q3_DUMMY), 
+                .O(XLXN_43));
+   (* HU_SET = "XLXI_28_111" *) 
+   CB4CE_MXILINX_reloj  XLXI_28 (.C(C), 
+                                .CE(XLXN_18), 
+                                .CLR(C6_DUMMY), 
+                                .CEO(), 
+                                .Q0(Q0_DUMMY), 
+                                .Q1(Q1_DUMMY), 
+                                .Q2(Q2_DUMMY), 
+                                .Q3(Q3_DUMMY), 
+                                .TC());
+   INV  XLXI_29 (.I(Q0_DUMMY), 
+                .O(XLXN_46));
+endmodule
+`timescale 1ns / 1ps
+
+module reloj(C, 
+             CE, 
+             E, 
+             ESET, 
+             SETHD, 
+             SETHU, 
+             SETMD, 
+             SETMU, 
+             AN0, 
+             AN1, 
+             AN2, 
+             AN3, 
+             L, 
+             S0, 
+             S1, 
+             S2, 
+             S3, 
+             S4, 
+             S5, 
+             S6);
+
+    input C;
+    input CE;
+    input E;
+    input ESET;
+    input SETHD;
+    input SETHU;
+    input SETMD;
+    input SETMU;
+   output AN0;
+   output AN1;
+   output AN2;
+   output AN3;
+   output L;
+   output S0;
+   output S1;
+   output S2;
+   output S3;
+   output S4;
+   output S5;
+   output S6;
+   
+   wire [15:0] HORA;
+   wire XLXN_60;
+   wire XLXN_69;
+   wire XLXN_76;
+   wire XLXN_78;
+   wire XLXN_81;
+   wire XLXN_89;
+   wire XLXN_120;
+   wire XLXN_124;
+   wire XLXN_129;
+   wire XLXN_146;
+   wire XLXN_163;
+   wire XLXN_164;
+   wire XLXN_165;
+   wire XLXN_194;
+   
+   Circuito_MUSER_reloj  XLXI_2 (.C(C), 
+                                .HD0(HORA[15]), 
+                                .HD1(HORA[14]), 
+                                .HD2(HORA[13]), 
+                                .HD3(HORA[12]), 
+                                .HU0(HORA[11]), 
+                                .HU1(HORA[10]), 
+                                .HU2(HORA[9]), 
+                                .HU3(HORA[8]), 
+                                .MD0(HORA[7]), 
+                                .MD1(HORA[6]), 
+                                .MD2(HORA[5]), 
+                                .MD3(HORA[4]), 
+                                .MU0(HORA[3]), 
+                                .MU1(HORA[2]), 
+                                .MU2(HORA[1]), 
+                                .MU3(HORA[0]), 
+                                .AN0(AN0), 
+                                .AN1(AN1), 
+                                .AN2(AN2), 
+                                .AN3(AN3), 
+                                .S0(S0), 
+                                .S1(S1), 
+                                .S2(S2), 
+                                .S3(S3), 
+                                .S4(S4), 
+                                .S5(S5), 
+                                .S6(S6));
+   contador6_MUSER_reloj  XLXI_17 (.C(XLXN_69), 
+                                  .C6(XLXN_81), 
+                                  .Q0(HORA[7]), 
+                                  .Q1(HORA[6]), 
+                                  .Q2(HORA[5]), 
+                                  .Q3(HORA[4]));
+   conta10_MUSER_reloj  XLXI_23 (.C(XLXN_60), 
+                                .CLR(ESET), 
+                                .C10(XLXN_78), 
+                                .Q0(HORA[3]), 
+                                .Q1(HORA[2]), 
+                                .Q2(HORA[1]), 
+                                .Q3(HORA[0]));
+   (* HU_SET = "XLXI_28_112" *) 
+   M2_1_MXILINX_reloj  XLXI_28 (.D0(XLXN_76), 
+                               .D1(SETMU), 
+                               .S0(ESET), 
+                               .O(XLXN_60));
+   (* HU_SET = "XLXI_31_113" *) 
+   M2_1_MXILINX_reloj  XLXI_31 (.D0(XLXN_78), 
+                               .D1(SETMD), 
+                               .S0(ESET), 
+                               .O(XLXN_69));
+   (* HU_SET = "XLXI_32_114" *) 
+   M2_1_MXILINX_reloj  XLXI_32 (.D0(XLXN_81), 
+                               .D1(SETHU), 
+                               .S0(ESET), 
+                               .O(XLXN_120));
+   conta2_MUSER_reloj  XLXI_34 (.C(XLXN_146), 
+                               .R(), 
+                               .C2(), 
+                               .Q0(HORA[15]), 
+                               .Q1(HORA[14]));
+   (* HU_SET = "XLXI_35_115" *) 
+   M2_1_MXILINX_reloj  XLXI_35 (.D0(XLXN_163), 
+                               .D1(SETHD), 
+                               .S0(ESET), 
+                               .O(XLXN_146));
+   GND  XLXI_36 (.G(HORA[13]));
+   AND2  XLXI_38 (.I0(XLXN_165), 
+                 .I1(XLXN_124), 
+                 .O(XLXN_164));
+   AND2  XLXI_39 (.I0(HORA[14]), 
+                 .I1(XLXN_129), 
+                 .O(XLXN_124));
+   INV  XLXI_41 (.I(HORA[15]), 
+                .O(XLXN_129));
+   OR2  XLXI_43 (.I0(XLXN_89), 
+                .I1(XLXN_164), 
+                .O(XLXN_163));
+   uHora_MUSER_reloj  XLXI_44 (.C(XLXN_120), 
+                              .R(XLXN_164), 
+                              .C4(XLXN_165), 
+                              .C10(XLXN_89), 
+                              .Q0(HORA[11]), 
+                              .Q1(HORA[10]), 
+                              .Q2(HORA[9]), 
+                              .Q3(HORA[8]));
+   Alarma_MUSER_reloj  XLXI_45 (.C(C), 
+                               .CE(CE), 
+                               .E(E), 
+                               .ESET(XLXN_194), 
+                               .Hora(HORA[15:0]), 
+                               .A(L));
+   GND  XLXI_46 (.G(HORA[12]));
+   INV  XLXI_47 (.I(ESET), 
+                .O(XLXN_194));
+   Minuto_MUSER_reloj  XLXI_49 (.C(C), 
+                               .M(XLXN_76));
+endmodule

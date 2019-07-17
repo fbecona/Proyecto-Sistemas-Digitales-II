@@ -1,0 +1,3 @@
+select figure at 931 794 8 -branches -sn=1
+select figure at 920 815 8 -branches -sn=1
+select figure at 920 819 8 -branches -all -sn=1

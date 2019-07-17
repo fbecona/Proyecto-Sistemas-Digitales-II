@@ -1,0 +1,2239 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.20 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.21 secs
+ 
+--> Reading design: reloj.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "reloj.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "reloj"
+Output Format                      : NGC
+Target Device                      : xc3s100e-5-cp132
+
+---- Source Options
+Top Module Name                    : reloj
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "Segmento6.vf" in library work
+Compiling verilog file "Segmento5.vf" in library work
+Module <Segmento6> compiled
+Compiling verilog file "Segmento4.vf" in library work
+Module <Segmento5> compiled
+Compiling verilog file "Segmento3.vf" in library work
+Module <Segmento4> compiled
+Compiling verilog file "Segmento2.vf" in library work
+Module <Segmento3> compiled
+Compiling verilog file "Segmento1.vf" in library work
+Module <Segmento2> compiled
+Compiling verilog file "Segmento0.vf" in library work
+Module <Segmento1> compiled
+Compiling verilog file "contador5.vf" in library work
+Module <Segmento0> compiled
+Module <FTRSE_MXILINX_contador5> compiled
+Module <CB4RE_MXILINX_contador5> compiled
+Compiling verilog file "contador10.vf" in library work
+Module <contador5> compiled
+Module <FTRSE_MXILINX_contador10> compiled
+Module <CB4RE_MXILINX_contador10> compiled
+Compiling verilog file "SieteSegmentos.vf" in library work
+Module <contador10> compiled
+Module <Segmento6_MUSER_SieteSegmentos> compiled
+Module <Segmento5_MUSER_SieteSegmentos> compiled
+Module <Segmento4_MUSER_SieteSegmentos> compiled
+Module <Segmento3_MUSER_SieteSegmentos> compiled
+Module <Segmento2_MUSER_SieteSegmentos> compiled
+Module <Segmento1_MUSER_SieteSegmentos> compiled
+Module <Segmento0_MUSER_SieteSegmentos> compiled
+Compiling verilog file "segundo.vf" in library work
+Module <SieteSegmentos> compiled
+Module <FTRSE_MXILINX_segundo> compiled
+Module <CB4RE_MXILINX_segundo> compiled
+Module <contador10_MUSER_segundo> compiled
+Module <contador5_MUSER_segundo> compiled
+Compiling verilog file "Contador6Minuto.vf" in library work
+Module <segundo> compiled
+Module <FTRSE_MXILINX_Contador6Minuto> compiled
+Module <CB4RE_MXILINX_Contador6Minuto> compiled
+Compiling verilog file "uHora.vf" in library work
+Module <Contador6Minuto> compiled
+Module <FTCE_MXILINX_uHora> compiled
+Module <CB4CE_MXILINX_uHora> compiled
+Compiling verilog file "minuto.vf" in library work
+Module <uHora> compiled
+Module <FTRSE_MXILINX_minuto> compiled
+Module <CB4RE_MXILINX_minuto> compiled
+Module <Contador6Minuto_MUSER_minuto> compiled
+Module <contador10_MUSER_minuto> compiled
+Module <contador5_MUSER_minuto> compiled
+Module <segundo_MUSER_minuto> compiled
+Compiling verilog file "contador6.vf" in library work
+Module <minuto> compiled
+Module <FTCE_MXILINX_contador6> compiled
+Module <CB4CE_MXILINX_contador6> compiled
+Compiling verilog file "conta2.vf" in library work
+Module <contador6> compiled
+Module <FTCE_MXILINX_conta2> compiled
+Module <CB2CE_MXILINX_conta2> compiled
+Compiling verilog file "conta10.vf" in library work
+Module <conta2> compiled
+Module <FTCE_MXILINX_conta10> compiled
+Module <CB4CE_MXILINX_conta10> compiled
+Compiling verilog file "Circuito.vf" in library work
+Module <conta10> compiled
+Module <FTRSE_MXILINX_Circuito> compiled
+Module <CB16RE_MXILINX_Circuito> compiled
+Module <CB2RE_MXILINX_Circuito> compiled
+Module <D2_4E_MXILINX_Circuito> compiled
+Module <M2_1E_MXILINX_Circuito> compiled
+Module <M4_1E_MXILINX_Circuito> compiled
+Module <Segmento6_MUSER_Circuito> compiled
+Module <Segmento5_MUSER_Circuito> compiled
+Module <Segmento4_MUSER_Circuito> compiled
+Module <Segmento3_MUSER_Circuito> compiled
+Module <Segmento2_MUSER_Circuito> compiled
+Module <Segmento1_MUSER_Circuito> compiled
+Module <Segmento0_MUSER_Circuito> compiled
+Module <SieteSegmentos_MUSER_Circuito> compiled
+Compiling verilog file "Alarma.vf" in library work
+Module <Circuito> compiled
+Module <FTRSE_MXILINX_Alarma> compiled
+Module <CB4RE_MXILINX_Alarma> compiled
+Module <contador10_MUSER_Alarma> compiled
+Module <contador5_MUSER_Alarma> compiled
+Module <segundo_MUSER_Alarma> compiled
+Module <FTCE_MXILINX_Alarma> compiled
+Module <COMP16_MXILINX_Alarma> compiled
+Module <FD16CE_MXILINX_Alarma> compiled
+Compiling verilog file "reloj.vf" in library work
+Module <Alarma> compiled
+Module <FTRSE_MXILINX_reloj> compiled
+Module <CB4RE_MXILINX_reloj> compiled
+Module <Contador6Minuto_MUSER_reloj> compiled
+Module <contador10_MUSER_reloj> compiled
+Module <contador5_MUSER_reloj> compiled
+Module <segundo_MUSER_reloj> compiled
+Module <Minuto_MUSER_reloj> compiled
+Module <FTCE_MXILINX_reloj> compiled
+Module <COMP16_MXILINX_reloj> compiled
+Module <FD16CE_MXILINX_reloj> compiled
+Module <Alarma_MUSER_reloj> compiled
+Module <CB4CE_MXILINX_reloj> compiled
+Module <uHora_MUSER_reloj> compiled
+Module <CB16RE_MXILINX_reloj> compiled
+Module <CB2RE_MXILINX_reloj> compiled
+Module <D2_4E_MXILINX_reloj> compiled
+Module <M2_1E_MXILINX_reloj> compiled
+Module <M4_1E_MXILINX_reloj> compiled
+Module <Segmento6_MUSER_reloj> compiled
+Module <Segmento5_MUSER_reloj> compiled
+Module <Segmento4_MUSER_reloj> compiled
+Module <Segmento3_MUSER_reloj> compiled
+Module <Segmento2_MUSER_reloj> compiled
+Module <Segmento1_MUSER_reloj> compiled
+Module <Segmento0_MUSER_reloj> compiled
+Module <SieteSegmentos_MUSER_reloj> compiled
+Module <Circuito_MUSER_reloj> compiled
+Module <M2_1_MXILINX_reloj> compiled
+Module <CB2CE_MXILINX_reloj> compiled
+Module <conta2_MUSER_reloj> compiled
+Module <conta10_MUSER_reloj> compiled
+Module <contador6_MUSER_reloj> compiled
+Module <reloj> compiled
+No errors in compilation
+Analysis of file <"reloj.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <reloj> in library <work>.
+
+Analyzing hierarchy for module <Circuito_MUSER_reloj> in library <work>.
+
+Analyzing hierarchy for module <contador6_MUSER_reloj> in library <work>.
+
+Analyzing hierarchy for module <conta10_MUSER_reloj> in library <work>.
+
+Analyzing hierarchy for module <M2_1_MXILINX_reloj> in library <work>.
+
+Analyzing hierarchy for module <M2_1_MXILINX_reloj> in library <work>.
+
+Analyzing hierarchy for module <M2_1_MXILINX_reloj> in library <work>.
+
+Analyzing hierarchy for module <conta2_MUSER_reloj> in library <work>.
+
+Analyzing hierarchy for module <M2_1_MXILINX_reloj> in library <work>.
+
+Analyzing hierarchy for module <uHora_MUSER_reloj> in library <work>.
+
+Analyzing hierarchy for module <Alarma_MUSER_reloj> in library <work>.
+
+Analyzing hierarchy for module <Minuto_MUSER_reloj> in library <work>.
+
+Analyzing hierarchy for module <M4_1E_MXILINX_reloj> in library <work>.
+
+Analyzing hierarchy for module <M4_1E_MXILINX_reloj> in library <work>.
+
+Analyzing hierarchy for module <M4_1E_MXILINX_reloj> in library <work>.
+
+Analyzing hierarchy for module <M4_1E_MXILINX_reloj> in library <work>.
+
+Analyzing hierarchy for module <SieteSegmentos_MUSER_reloj> in library <work>.
+
+Analyzing hierarchy for module <CB2RE_MXILINX_reloj> in library <work>.
+
+Analyzing hierarchy for module <CB16RE_MXILINX_reloj> in library <work>.
+
+Analyzing hierarchy for module <D2_4E_MXILINX_reloj> in library <work>.
+
+Analyzing hierarchy for module <CB4CE_MXILINX_reloj> in library <work>.
+
+Analyzing hierarchy for module <CB4CE_MXILINX_reloj> in library <work>.
+
+Analyzing hierarchy for module <CB2CE_MXILINX_reloj> in library <work>.
+
+Analyzing hierarchy for module <CB4CE_MXILINX_reloj> in library <work>.
+
+Analyzing hierarchy for module <FD16CE_MXILINX_reloj> in library <work>.
+
+Analyzing hierarchy for module <COMP16_MXILINX_reloj> in library <work>.
+
+Analyzing hierarchy for module <FTCE_MXILINX_reloj> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <segundo_MUSER_reloj> in library <work>.
+
+Analyzing hierarchy for module <contador10_MUSER_reloj> in library <work>.
+
+Analyzing hierarchy for module <Contador6Minuto_MUSER_reloj> in library <work>.
+
+Analyzing hierarchy for module <M2_1E_MXILINX_reloj> in library <work>.
+
+Analyzing hierarchy for module <M2_1E_MXILINX_reloj> in library <work>.
+
+Analyzing hierarchy for module <Segmento0_MUSER_reloj> in library <work>.
+
+Analyzing hierarchy for module <Segmento1_MUSER_reloj> in library <work>.
+
+Analyzing hierarchy for module <Segmento2_MUSER_reloj> in library <work>.
+
+Analyzing hierarchy for module <Segmento3_MUSER_reloj> in library <work>.
+
+Analyzing hierarchy for module <Segmento4_MUSER_reloj> in library <work>.
+
+Analyzing hierarchy for module <Segmento5_MUSER_reloj> in library <work>.
+
+Analyzing hierarchy for module <Segmento6_MUSER_reloj> in library <work>.
+
+Analyzing hierarchy for module <FTRSE_MXILINX_reloj> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTRSE_MXILINX_reloj> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTRSE_MXILINX_reloj> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTRSE_MXILINX_reloj> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTRSE_MXILINX_reloj> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTRSE_MXILINX_reloj> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTRSE_MXILINX_reloj> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTRSE_MXILINX_reloj> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTRSE_MXILINX_reloj> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTRSE_MXILINX_reloj> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTRSE_MXILINX_reloj> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTRSE_MXILINX_reloj> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTRSE_MXILINX_reloj> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTRSE_MXILINX_reloj> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTRSE_MXILINX_reloj> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTRSE_MXILINX_reloj> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTRSE_MXILINX_reloj> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTRSE_MXILINX_reloj> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_reloj> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_reloj> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_reloj> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_reloj> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_reloj> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_reloj> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <contador5_MUSER_reloj> in library <work>.
+
+Analyzing hierarchy for module <CB4RE_MXILINX_reloj> in library <work>.
+
+Analyzing hierarchy for module <CB4RE_MXILINX_reloj> in library <work>.
+
+Analyzing hierarchy for module <CB4RE_MXILINX_reloj> in library <work>.
+
+Analyzing hierarchy for module <FTRSE_MXILINX_reloj> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTRSE_MXILINX_reloj> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTRSE_MXILINX_reloj> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTRSE_MXILINX_reloj> in library <work> with parameters.
+	INIT = "0"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <reloj>.
+WARNING:Xst:852 - "reloj.vf" line 2072: Unconnected input port 'R' of instance 'XLXI_34' is tied to GND.
+Module <reloj> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_28_112" for instance <XLXI_28> in unit <reloj>.
+    Set user-defined property "HU_SET =  XLXI_31_113" for instance <XLXI_31> in unit <reloj>.
+    Set user-defined property "HU_SET =  XLXI_32_114" for instance <XLXI_32> in unit <reloj>.
+    Set user-defined property "HU_SET =  XLXI_35_115" for instance <XLXI_35> in unit <reloj>.
+Analyzing module <Circuito_MUSER_reloj> in library <work>.
+Module <Circuito_MUSER_reloj> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_2_100" for instance <XLXI_2> in unit <Circuito_MUSER_reloj>.
+    Set user-defined property "HU_SET =  XLXI_3_101" for instance <XLXI_3> in unit <Circuito_MUSER_reloj>.
+    Set user-defined property "HU_SET =  XLXI_4_102" for instance <XLXI_4> in unit <Circuito_MUSER_reloj>.
+    Set user-defined property "HU_SET =  XLXI_5_103" for instance <XLXI_5> in unit <Circuito_MUSER_reloj>.
+    Set user-defined property "HU_SET =  XLXI_81_105" for instance <XLXI_81> in unit <Circuito_MUSER_reloj>.
+    Set user-defined property "HU_SET =  XLXI_82_106" for instance <XLXI_82> in unit <Circuito_MUSER_reloj>.
+    Set user-defined property "HU_SET =  XLXI_91_104" for instance <XLXI_91> in unit <Circuito_MUSER_reloj>.
+Analyzing module <M4_1E_MXILINX_reloj.1> in library <work>.
+Module <M4_1E_MXILINX_reloj.1> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_M01_99" for instance <I_M01> in unit <M4_1E_MXILINX_reloj.1>.
+    Set user-defined property "HU_SET =  I_M23_98" for instance <I_M23> in unit <M4_1E_MXILINX_reloj.1>.
+Analyzing module <M2_1E_MXILINX_reloj.1> in library <work>.
+Module <M2_1E_MXILINX_reloj.1> is correct for synthesis.
+ 
+Analyzing module <M2_1E_MXILINX_reloj.2> in library <work>.
+Module <M2_1E_MXILINX_reloj.2> is correct for synthesis.
+ 
+Analyzing module <M4_1E_MXILINX_reloj.2> in library <work>.
+Module <M4_1E_MXILINX_reloj.2> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_M01_99" for instance <I_M01> in unit <M4_1E_MXILINX_reloj.2>.
+    Set user-defined property "HU_SET =  I_M23_98" for instance <I_M23> in unit <M4_1E_MXILINX_reloj.2>.
+Analyzing module <M4_1E_MXILINX_reloj.3> in library <work>.
+Module <M4_1E_MXILINX_reloj.3> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_M01_99" for instance <I_M01> in unit <M4_1E_MXILINX_reloj.3>.
+    Set user-defined property "HU_SET =  I_M23_98" for instance <I_M23> in unit <M4_1E_MXILINX_reloj.3>.
+Analyzing module <M4_1E_MXILINX_reloj.4> in library <work>.
+Module <M4_1E_MXILINX_reloj.4> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_M01_99" for instance <I_M01> in unit <M4_1E_MXILINX_reloj.4>.
+    Set user-defined property "HU_SET =  I_M23_98" for instance <I_M23> in unit <M4_1E_MXILINX_reloj.4>.
+Analyzing module <SieteSegmentos_MUSER_reloj> in library <work>.
+Module <SieteSegmentos_MUSER_reloj> is correct for synthesis.
+ 
+Analyzing module <Segmento0_MUSER_reloj> in library <work>.
+Module <Segmento0_MUSER_reloj> is correct for synthesis.
+ 
+Analyzing module <Segmento1_MUSER_reloj> in library <work>.
+Module <Segmento1_MUSER_reloj> is correct for synthesis.
+ 
+Analyzing module <Segmento2_MUSER_reloj> in library <work>.
+Module <Segmento2_MUSER_reloj> is correct for synthesis.
+ 
+Analyzing module <Segmento3_MUSER_reloj> in library <work>.
+Module <Segmento3_MUSER_reloj> is correct for synthesis.
+ 
+Analyzing module <Segmento4_MUSER_reloj> in library <work>.
+Module <Segmento4_MUSER_reloj> is correct for synthesis.
+ 
+Analyzing module <Segmento5_MUSER_reloj> in library <work>.
+Module <Segmento5_MUSER_reloj> is correct for synthesis.
+ 
+Analyzing module <Segmento6_MUSER_reloj> in library <work>.
+Module <Segmento6_MUSER_reloj> is correct for synthesis.
+ 
+Analyzing module <CB2RE_MXILINX_reloj> in library <work>.
+Module <CB2RE_MXILINX_reloj> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_Q0_96" for instance <I_Q0> in unit <CB2RE_MXILINX_reloj>.
+    Set user-defined property "HU_SET =  I_Q1_97" for instance <I_Q1> in unit <CB2RE_MXILINX_reloj>.
+Analyzing module <FTRSE_MXILINX_reloj.1> in library <work>.
+	INIT = 1'b0
+Module <FTRSE_MXILINX_reloj.1> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.1>.
+Analyzing module <FTRSE_MXILINX_reloj.2> in library <work>.
+	INIT = 1'b0
+Module <FTRSE_MXILINX_reloj.2> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.2>.
+Analyzing module <CB16RE_MXILINX_reloj> in library <work>.
+Module <CB16RE_MXILINX_reloj> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_Q0_95" for instance <I_Q0> in unit <CB16RE_MXILINX_reloj>.
+    Set user-defined property "HU_SET =  I_Q1_94" for instance <I_Q1> in unit <CB16RE_MXILINX_reloj>.
+    Set user-defined property "HU_SET =  I_Q10_82" for instance <I_Q10> in unit <CB16RE_MXILINX_reloj>.
+    Set user-defined property "HU_SET =  I_Q11_83" for instance <I_Q11> in unit <CB16RE_MXILINX_reloj>.
+    Set user-defined property "HU_SET =  I_Q12_84" for instance <I_Q12> in unit <CB16RE_MXILINX_reloj>.
+    Set user-defined property "HU_SET =  I_Q13_85" for instance <I_Q13> in unit <CB16RE_MXILINX_reloj>.
+    Set user-defined property "HU_SET =  I_Q14_86" for instance <I_Q14> in unit <CB16RE_MXILINX_reloj>.
+    Set user-defined property "HU_SET =  I_Q15_87" for instance <I_Q15> in unit <CB16RE_MXILINX_reloj>.
+    Set user-defined property "HU_SET =  I_Q2_93" for instance <I_Q2> in unit <CB16RE_MXILINX_reloj>.
+    Set user-defined property "HU_SET =  I_Q3_92" for instance <I_Q3> in unit <CB16RE_MXILINX_reloj>.
+    Set user-defined property "HU_SET =  I_Q4_91" for instance <I_Q4> in unit <CB16RE_MXILINX_reloj>.
+    Set user-defined property "HU_SET =  I_Q5_90" for instance <I_Q5> in unit <CB16RE_MXILINX_reloj>.
+    Set user-defined property "HU_SET =  I_Q6_89" for instance <I_Q6> in unit <CB16RE_MXILINX_reloj>.
+    Set user-defined property "HU_SET =  I_Q7_88" for instance <I_Q7> in unit <CB16RE_MXILINX_reloj>.
+    Set user-defined property "HU_SET =  I_Q8_80" for instance <I_Q8> in unit <CB16RE_MXILINX_reloj>.
+    Set user-defined property "HU_SET =  I_Q9_81" for instance <I_Q9> in unit <CB16RE_MXILINX_reloj>.
+Analyzing module <FTRSE_MXILINX_reloj.3> in library <work>.
+	INIT = 1'b0
+Module <FTRSE_MXILINX_reloj.3> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.3>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.3>.
+Analyzing module <FTRSE_MXILINX_reloj.4> in library <work>.
+	INIT = 1'b0
+Module <FTRSE_MXILINX_reloj.4> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.4>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.4>.
+Analyzing module <FTRSE_MXILINX_reloj.5> in library <work>.
+	INIT = 1'b0
+Module <FTRSE_MXILINX_reloj.5> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.5>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.5>.
+Analyzing module <FTRSE_MXILINX_reloj.6> in library <work>.
+	INIT = 1'b0
+Module <FTRSE_MXILINX_reloj.6> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.6>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.6>.
+Analyzing module <FTRSE_MXILINX_reloj.7> in library <work>.
+	INIT = 1'b0
+Module <FTRSE_MXILINX_reloj.7> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.7>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.7>.
+Analyzing module <FTRSE_MXILINX_reloj.8> in library <work>.
+	INIT = 1'b0
+Module <FTRSE_MXILINX_reloj.8> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.8>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.8>.
+Analyzing module <FTRSE_MXILINX_reloj.9> in library <work>.
+	INIT = 1'b0
+Module <FTRSE_MXILINX_reloj.9> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.9>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.9>.
+Analyzing module <FTRSE_MXILINX_reloj.10> in library <work>.
+	INIT = 1'b0
+Module <FTRSE_MXILINX_reloj.10> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.10>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.10>.
+Analyzing module <FTRSE_MXILINX_reloj.11> in library <work>.
+	INIT = 1'b0
+Module <FTRSE_MXILINX_reloj.11> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.11>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.11>.
+Analyzing module <FTRSE_MXILINX_reloj.12> in library <work>.
+	INIT = 1'b0
+Module <FTRSE_MXILINX_reloj.12> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.12>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.12>.
+Analyzing module <FTRSE_MXILINX_reloj.13> in library <work>.
+	INIT = 1'b0
+Module <FTRSE_MXILINX_reloj.13> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.13>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.13>.
+Analyzing module <FTRSE_MXILINX_reloj.14> in library <work>.
+	INIT = 1'b0
+Module <FTRSE_MXILINX_reloj.14> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.14>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.14>.
+Analyzing module <FTRSE_MXILINX_reloj.15> in library <work>.
+	INIT = 1'b0
+Module <FTRSE_MXILINX_reloj.15> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.15>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.15>.
+Analyzing module <FTRSE_MXILINX_reloj.16> in library <work>.
+	INIT = 1'b0
+Module <FTRSE_MXILINX_reloj.16> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.16>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.16>.
+Analyzing module <FTRSE_MXILINX_reloj.17> in library <work>.
+	INIT = 1'b0
+Module <FTRSE_MXILINX_reloj.17> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.17>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.17>.
+Analyzing module <FTRSE_MXILINX_reloj.18> in library <work>.
+	INIT = 1'b0
+Module <FTRSE_MXILINX_reloj.18> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.18>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.18>.
+Analyzing module <D2_4E_MXILINX_reloj> in library <work>.
+Module <D2_4E_MXILINX_reloj> is correct for synthesis.
+ 
+Analyzing module <contador6_MUSER_reloj> in library <work>.
+Module <contador6_MUSER_reloj> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_28_111" for instance <XLXI_28> in unit <contador6_MUSER_reloj>.
+Analyzing module <CB4CE_MXILINX_reloj.1> in library <work>.
+Module <CB4CE_MXILINX_reloj.1> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_Q0_75" for instance <I_Q0> in unit <CB4CE_MXILINX_reloj.1>.
+    Set user-defined property "HU_SET =  I_Q1_76" for instance <I_Q1> in unit <CB4CE_MXILINX_reloj.1>.
+    Set user-defined property "HU_SET =  I_Q2_77" for instance <I_Q2> in unit <CB4CE_MXILINX_reloj.1>.
+    Set user-defined property "HU_SET =  I_Q3_78" for instance <I_Q3> in unit <CB4CE_MXILINX_reloj.1>.
+Analyzing module <FTCE_MXILINX_reloj.2> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_reloj.2> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_reloj.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_reloj.2>.
+Analyzing module <FTCE_MXILINX_reloj.3> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_reloj.3> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_reloj.3>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_reloj.3>.
+Analyzing module <FTCE_MXILINX_reloj.4> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_reloj.4> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_reloj.4>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_reloj.4>.
+Analyzing module <FTCE_MXILINX_reloj.5> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_reloj.5> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_reloj.5>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_reloj.5>.
+Analyzing module <conta10_MUSER_reloj> in library <work>.
+Module <conta10_MUSER_reloj> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_26_110" for instance <XLXI_26> in unit <conta10_MUSER_reloj>.
+Analyzing module <CB4CE_MXILINX_reloj.2> in library <work>.
+Module <CB4CE_MXILINX_reloj.2> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_Q0_75" for instance <I_Q0> in unit <CB4CE_MXILINX_reloj.2>.
+    Set user-defined property "HU_SET =  I_Q1_76" for instance <I_Q1> in unit <CB4CE_MXILINX_reloj.2>.
+    Set user-defined property "HU_SET =  I_Q2_77" for instance <I_Q2> in unit <CB4CE_MXILINX_reloj.2>.
+    Set user-defined property "HU_SET =  I_Q3_78" for instance <I_Q3> in unit <CB4CE_MXILINX_reloj.2>.
+Analyzing module <M2_1_MXILINX_reloj.1> in library <work>.
+Module <M2_1_MXILINX_reloj.1> is correct for synthesis.
+ 
+Analyzing module <M2_1_MXILINX_reloj.2> in library <work>.
+Module <M2_1_MXILINX_reloj.2> is correct for synthesis.
+ 
+Analyzing module <M2_1_MXILINX_reloj.3> in library <work>.
+Module <M2_1_MXILINX_reloj.3> is correct for synthesis.
+ 
+Analyzing module <conta2_MUSER_reloj> in library <work>.
+Module <conta2_MUSER_reloj> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_32_109" for instance <XLXI_32> in unit <conta2_MUSER_reloj>.
+Analyzing module <CB2CE_MXILINX_reloj> in library <work>.
+Module <CB2CE_MXILINX_reloj> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_Q0_107" for instance <I_Q0> in unit <CB2CE_MXILINX_reloj>.
+    Set user-defined property "HU_SET =  I_Q1_108" for instance <I_Q1> in unit <CB2CE_MXILINX_reloj>.
+Analyzing module <FTCE_MXILINX_reloj.6> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_reloj.6> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_reloj.6>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_reloj.6>.
+Analyzing module <FTCE_MXILINX_reloj.7> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_reloj.7> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_reloj.7>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_reloj.7>.
+Analyzing module <M2_1_MXILINX_reloj.4> in library <work>.
+Module <M2_1_MXILINX_reloj.4> is correct for synthesis.
+ 
+Analyzing module <uHora_MUSER_reloj> in library <work>.
+Module <uHora_MUSER_reloj> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_26_79" for instance <XLXI_26> in unit <uHora_MUSER_reloj>.
+Analyzing module <CB4CE_MXILINX_reloj.3> in library <work>.
+Module <CB4CE_MXILINX_reloj.3> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_Q0_75" for instance <I_Q0> in unit <CB4CE_MXILINX_reloj.3>.
+    Set user-defined property "HU_SET =  I_Q1_76" for instance <I_Q1> in unit <CB4CE_MXILINX_reloj.3>.
+    Set user-defined property "HU_SET =  I_Q2_77" for instance <I_Q2> in unit <CB4CE_MXILINX_reloj.3>.
+    Set user-defined property "HU_SET =  I_Q3_78" for instance <I_Q3> in unit <CB4CE_MXILINX_reloj.3>.
+Analyzing module <Alarma_MUSER_reloj> in library <work>.
+WARNING:Xst:852 - "reloj.vf" line 659: Unconnected input port 'CLR' of instance 'XLXI_1' is tied to GND.
+WARNING:Xst:852 - "reloj.vf" line 669: Unconnected input port 'CLR' of instance 'XLXI_5' is tied to GND.
+Module <Alarma_MUSER_reloj> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_1_72" for instance <XLXI_1> in unit <Alarma_MUSER_reloj>.
+    Set user-defined property "HU_SET =  XLXI_2_73" for instance <XLXI_2> in unit <Alarma_MUSER_reloj>.
+    Set user-defined property "HU_SET =  XLXI_5_74" for instance <XLXI_5> in unit <Alarma_MUSER_reloj>.
+Analyzing module <FD16CE_MXILINX_reloj> in library <work>.
+Module <FD16CE_MXILINX_reloj> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_Q0> in unit <FD16CE_MXILINX_reloj>.
+    Set user-defined property "INIT =  0" for instance <I_Q1> in unit <FD16CE_MXILINX_reloj>.
+    Set user-defined property "INIT =  0" for instance <I_Q2> in unit <FD16CE_MXILINX_reloj>.
+    Set user-defined property "INIT =  0" for instance <I_Q3> in unit <FD16CE_MXILINX_reloj>.
+    Set user-defined property "INIT =  0" for instance <I_Q4> in unit <FD16CE_MXILINX_reloj>.
+    Set user-defined property "INIT =  0" for instance <I_Q5> in unit <FD16CE_MXILINX_reloj>.
+    Set user-defined property "INIT =  0" for instance <I_Q6> in unit <FD16CE_MXILINX_reloj>.
+    Set user-defined property "INIT =  0" for instance <I_Q7> in unit <FD16CE_MXILINX_reloj>.
+    Set user-defined property "INIT =  0" for instance <I_Q8> in unit <FD16CE_MXILINX_reloj>.
+    Set user-defined property "INIT =  0" for instance <I_Q9> in unit <FD16CE_MXILINX_reloj>.
+    Set user-defined property "INIT =  0" for instance <I_Q10> in unit <FD16CE_MXILINX_reloj>.
+    Set user-defined property "INIT =  0" for instance <I_Q11> in unit <FD16CE_MXILINX_reloj>.
+    Set user-defined property "INIT =  0" for instance <I_Q12> in unit <FD16CE_MXILINX_reloj>.
+    Set user-defined property "INIT =  0" for instance <I_Q13> in unit <FD16CE_MXILINX_reloj>.
+    Set user-defined property "INIT =  0" for instance <I_Q14> in unit <FD16CE_MXILINX_reloj>.
+    Set user-defined property "INIT =  0" for instance <I_Q15> in unit <FD16CE_MXILINX_reloj>.
+Analyzing module <COMP16_MXILINX_reloj> in library <work>.
+Module <COMP16_MXILINX_reloj> is correct for synthesis.
+ 
+Analyzing module <FTCE_MXILINX_reloj.1> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_reloj.1> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_reloj.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_reloj.1>.
+Analyzing module <segundo_MUSER_reloj> in library <work>.
+Module <segundo_MUSER_reloj> is correct for synthesis.
+ 
+Analyzing module <contador10_MUSER_reloj> in library <work>.
+Module <contador10_MUSER_reloj> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_1_70" for instance <XLXI_1> in unit <contador10_MUSER_reloj>.
+Analyzing module <CB4RE_MXILINX_reloj.1> in library <work>.
+Module <CB4RE_MXILINX_reloj.1> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_Q0_65" for instance <I_Q0> in unit <CB4RE_MXILINX_reloj.1>.
+    Set user-defined property "HU_SET =  I_Q1_66" for instance <I_Q1> in unit <CB4RE_MXILINX_reloj.1>.
+    Set user-defined property "HU_SET =  I_Q2_67" for instance <I_Q2> in unit <CB4RE_MXILINX_reloj.1>.
+    Set user-defined property "HU_SET =  I_Q3_68" for instance <I_Q3> in unit <CB4RE_MXILINX_reloj.1>.
+Analyzing module <FTRSE_MXILINX_reloj.19> in library <work>.
+	INIT = 1'b0
+Module <FTRSE_MXILINX_reloj.19> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.19>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.19>.
+Analyzing module <FTRSE_MXILINX_reloj.20> in library <work>.
+	INIT = 1'b0
+Module <FTRSE_MXILINX_reloj.20> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.20>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.20>.
+Analyzing module <FTRSE_MXILINX_reloj.21> in library <work>.
+	INIT = 1'b0
+Module <FTRSE_MXILINX_reloj.21> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.21>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.21>.
+Analyzing module <FTRSE_MXILINX_reloj.22> in library <work>.
+	INIT = 1'b0
+Module <FTRSE_MXILINX_reloj.22> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.22>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTRSE_MXILINX_reloj.22>.
+Analyzing module <contador5_MUSER_reloj> in library <work>.
+Module <contador5_MUSER_reloj> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_1_71" for instance <XLXI_1> in unit <contador5_MUSER_reloj>.
+Analyzing module <CB4RE_MXILINX_reloj.3> in library <work>.
+Module <CB4RE_MXILINX_reloj.3> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_Q0_65" for instance <I_Q0> in unit <CB4RE_MXILINX_reloj.3>.
+    Set user-defined property "HU_SET =  I_Q1_66" for instance <I_Q1> in unit <CB4RE_MXILINX_reloj.3>.
+    Set user-defined property "HU_SET =  I_Q2_67" for instance <I_Q2> in unit <CB4RE_MXILINX_reloj.3>.
+    Set user-defined property "HU_SET =  I_Q3_68" for instance <I_Q3> in unit <CB4RE_MXILINX_reloj.3>.
+Analyzing module <Minuto_MUSER_reloj> in library <work>.
+Module <Minuto_MUSER_reloj> is correct for synthesis.
+ 
+Analyzing module <Contador6Minuto_MUSER_reloj> in library <work>.
+Module <Contador6Minuto_MUSER_reloj> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_1_69" for instance <XLXI_1> in unit <Contador6Minuto_MUSER_reloj>.
+Analyzing module <CB4RE_MXILINX_reloj.2> in library <work>.
+Module <CB4RE_MXILINX_reloj.2> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_Q0_65" for instance <I_Q0> in unit <CB4RE_MXILINX_reloj.2>.
+    Set user-defined property "HU_SET =  I_Q1_66" for instance <I_Q1> in unit <CB4RE_MXILINX_reloj.2>.
+    Set user-defined property "HU_SET =  I_Q2_67" for instance <I_Q2> in unit <CB4RE_MXILINX_reloj.2>.
+    Set user-defined property "HU_SET =  I_Q3_68" for instance <I_Q3> in unit <CB4RE_MXILINX_reloj.2>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <M2_1_MXILINX_reloj_1>.
+    Related source file is "reloj.vf".
+Unit <M2_1_MXILINX_reloj_1> synthesized.
+
+
+Synthesizing Unit <M2_1_MXILINX_reloj_2>.
+    Related source file is "reloj.vf".
+Unit <M2_1_MXILINX_reloj_2> synthesized.
+
+
+Synthesizing Unit <M2_1_MXILINX_reloj_3>.
+    Related source file is "reloj.vf".
+Unit <M2_1_MXILINX_reloj_3> synthesized.
+
+
+Synthesizing Unit <M2_1_MXILINX_reloj_4>.
+    Related source file is "reloj.vf".
+Unit <M2_1_MXILINX_reloj_4> synthesized.
+
+
+Synthesizing Unit <D2_4E_MXILINX_reloj>.
+    Related source file is "reloj.vf".
+Unit <D2_4E_MXILINX_reloj> synthesized.
+
+
+Synthesizing Unit <M2_1E_MXILINX_reloj_1>.
+    Related source file is "reloj.vf".
+Unit <M2_1E_MXILINX_reloj_1> synthesized.
+
+
+Synthesizing Unit <M2_1E_MXILINX_reloj_2>.
+    Related source file is "reloj.vf".
+Unit <M2_1E_MXILINX_reloj_2> synthesized.
+
+
+Synthesizing Unit <Segmento0_MUSER_reloj>.
+    Related source file is "reloj.vf".
+Unit <Segmento0_MUSER_reloj> synthesized.
+
+
+Synthesizing Unit <Segmento1_MUSER_reloj>.
+    Related source file is "reloj.vf".
+Unit <Segmento1_MUSER_reloj> synthesized.
+
+
+Synthesizing Unit <Segmento2_MUSER_reloj>.
+    Related source file is "reloj.vf".
+Unit <Segmento2_MUSER_reloj> synthesized.
+
+
+Synthesizing Unit <Segmento3_MUSER_reloj>.
+    Related source file is "reloj.vf".
+Unit <Segmento3_MUSER_reloj> synthesized.
+
+
+Synthesizing Unit <Segmento4_MUSER_reloj>.
+    Related source file is "reloj.vf".
+Unit <Segmento4_MUSER_reloj> synthesized.
+
+
+Synthesizing Unit <Segmento5_MUSER_reloj>.
+    Related source file is "reloj.vf".
+Unit <Segmento5_MUSER_reloj> synthesized.
+
+
+Synthesizing Unit <Segmento6_MUSER_reloj>.
+    Related source file is "reloj.vf".
+Unit <Segmento6_MUSER_reloj> synthesized.
+
+
+Synthesizing Unit <FTRSE_MXILINX_reloj_1>.
+    Related source file is "reloj.vf".
+Unit <FTRSE_MXILINX_reloj_1> synthesized.
+
+
+Synthesizing Unit <FTRSE_MXILINX_reloj_2>.
+    Related source file is "reloj.vf".
+Unit <FTRSE_MXILINX_reloj_2> synthesized.
+
+
+Synthesizing Unit <FTRSE_MXILINX_reloj_3>.
+    Related source file is "reloj.vf".
+Unit <FTRSE_MXILINX_reloj_3> synthesized.
+
+
+Synthesizing Unit <FTRSE_MXILINX_reloj_4>.
+    Related source file is "reloj.vf".
+Unit <FTRSE_MXILINX_reloj_4> synthesized.
+
+
+Synthesizing Unit <FTRSE_MXILINX_reloj_5>.
+    Related source file is "reloj.vf".
+Unit <FTRSE_MXILINX_reloj_5> synthesized.
+
+
+Synthesizing Unit <FTRSE_MXILINX_reloj_6>.
+    Related source file is "reloj.vf".
+Unit <FTRSE_MXILINX_reloj_6> synthesized.
+
+
+Synthesizing Unit <FTRSE_MXILINX_reloj_7>.
+    Related source file is "reloj.vf".
+Unit <FTRSE_MXILINX_reloj_7> synthesized.
+
+
+Synthesizing Unit <FTRSE_MXILINX_reloj_8>.
+    Related source file is "reloj.vf".
+Unit <FTRSE_MXILINX_reloj_8> synthesized.
+
+
+Synthesizing Unit <FTRSE_MXILINX_reloj_9>.
+    Related source file is "reloj.vf".
+Unit <FTRSE_MXILINX_reloj_9> synthesized.
+
+
+Synthesizing Unit <FTRSE_MXILINX_reloj_10>.
+    Related source file is "reloj.vf".
+Unit <FTRSE_MXILINX_reloj_10> synthesized.
+
+
+Synthesizing Unit <FTRSE_MXILINX_reloj_11>.
+    Related source file is "reloj.vf".
+Unit <FTRSE_MXILINX_reloj_11> synthesized.
+
+
+Synthesizing Unit <FTRSE_MXILINX_reloj_12>.
+    Related source file is "reloj.vf".
+Unit <FTRSE_MXILINX_reloj_12> synthesized.
+
+
+Synthesizing Unit <FTRSE_MXILINX_reloj_13>.
+    Related source file is "reloj.vf".
+Unit <FTRSE_MXILINX_reloj_13> synthesized.
+
+
+Synthesizing Unit <FTRSE_MXILINX_reloj_14>.
+    Related source file is "reloj.vf".
+Unit <FTRSE_MXILINX_reloj_14> synthesized.
+
+
+Synthesizing Unit <FTRSE_MXILINX_reloj_15>.
+    Related source file is "reloj.vf".
+Unit <FTRSE_MXILINX_reloj_15> synthesized.
+
+
+Synthesizing Unit <FTRSE_MXILINX_reloj_16>.
+    Related source file is "reloj.vf".
+Unit <FTRSE_MXILINX_reloj_16> synthesized.
+
+
+Synthesizing Unit <FTRSE_MXILINX_reloj_17>.
+    Related source file is "reloj.vf".
+Unit <FTRSE_MXILINX_reloj_17> synthesized.
+
+
+Synthesizing Unit <FTRSE_MXILINX_reloj_18>.
+    Related source file is "reloj.vf".
+Unit <FTRSE_MXILINX_reloj_18> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_reloj_2>.
+    Related source file is "reloj.vf".
+Unit <FTCE_MXILINX_reloj_2> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_reloj_3>.
+    Related source file is "reloj.vf".
+Unit <FTCE_MXILINX_reloj_3> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_reloj_4>.
+    Related source file is "reloj.vf".
+Unit <FTCE_MXILINX_reloj_4> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_reloj_5>.
+    Related source file is "reloj.vf".
+Unit <FTCE_MXILINX_reloj_5> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_reloj_6>.
+    Related source file is "reloj.vf".
+Unit <FTCE_MXILINX_reloj_6> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_reloj_7>.
+    Related source file is "reloj.vf".
+Unit <FTCE_MXILINX_reloj_7> synthesized.
+
+
+Synthesizing Unit <FD16CE_MXILINX_reloj>.
+    Related source file is "reloj.vf".
+Unit <FD16CE_MXILINX_reloj> synthesized.
+
+
+Synthesizing Unit <COMP16_MXILINX_reloj>.
+    Related source file is "reloj.vf".
+Unit <COMP16_MXILINX_reloj> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_reloj_1>.
+    Related source file is "reloj.vf".
+Unit <FTCE_MXILINX_reloj_1> synthesized.
+
+
+Synthesizing Unit <FTRSE_MXILINX_reloj_19>.
+    Related source file is "reloj.vf".
+Unit <FTRSE_MXILINX_reloj_19> synthesized.
+
+
+Synthesizing Unit <FTRSE_MXILINX_reloj_20>.
+    Related source file is "reloj.vf".
+Unit <FTRSE_MXILINX_reloj_20> synthesized.
+
+
+Synthesizing Unit <FTRSE_MXILINX_reloj_21>.
+    Related source file is "reloj.vf".
+Unit <FTRSE_MXILINX_reloj_21> synthesized.
+
+
+Synthesizing Unit <FTRSE_MXILINX_reloj_22>.
+    Related source file is "reloj.vf".
+Unit <FTRSE_MXILINX_reloj_22> synthesized.
+
+
+Synthesizing Unit <M4_1E_MXILINX_reloj_1>.
+    Related source file is "reloj.vf".
+Unit <M4_1E_MXILINX_reloj_1> synthesized.
+
+
+Synthesizing Unit <M4_1E_MXILINX_reloj_2>.
+    Related source file is "reloj.vf".
+Unit <M4_1E_MXILINX_reloj_2> synthesized.
+
+
+Synthesizing Unit <M4_1E_MXILINX_reloj_3>.
+    Related source file is "reloj.vf".
+Unit <M4_1E_MXILINX_reloj_3> synthesized.
+
+
+Synthesizing Unit <M4_1E_MXILINX_reloj_4>.
+    Related source file is "reloj.vf".
+Unit <M4_1E_MXILINX_reloj_4> synthesized.
+
+
+Synthesizing Unit <SieteSegmentos_MUSER_reloj>.
+    Related source file is "reloj.vf".
+Unit <SieteSegmentos_MUSER_reloj> synthesized.
+
+
+Synthesizing Unit <CB2RE_MXILINX_reloj>.
+    Related source file is "reloj.vf".
+Unit <CB2RE_MXILINX_reloj> synthesized.
+
+
+Synthesizing Unit <CB16RE_MXILINX_reloj>.
+    Related source file is "reloj.vf".
+Unit <CB16RE_MXILINX_reloj> synthesized.
+
+
+Synthesizing Unit <CB4CE_MXILINX_reloj_1>.
+    Related source file is "reloj.vf".
+Unit <CB4CE_MXILINX_reloj_1> synthesized.
+
+
+Synthesizing Unit <CB4CE_MXILINX_reloj_2>.
+    Related source file is "reloj.vf".
+Unit <CB4CE_MXILINX_reloj_2> synthesized.
+
+
+Synthesizing Unit <CB2CE_MXILINX_reloj>.
+    Related source file is "reloj.vf".
+Unit <CB2CE_MXILINX_reloj> synthesized.
+
+
+Synthesizing Unit <CB4CE_MXILINX_reloj_3>.
+    Related source file is "reloj.vf".
+Unit <CB4CE_MXILINX_reloj_3> synthesized.
+
+
+Synthesizing Unit <CB4RE_MXILINX_reloj_1>.
+    Related source file is "reloj.vf".
+Unit <CB4RE_MXILINX_reloj_1> synthesized.
+
+
+Synthesizing Unit <CB4RE_MXILINX_reloj_3>.
+    Related source file is "reloj.vf".
+Unit <CB4RE_MXILINX_reloj_3> synthesized.
+
+
+Synthesizing Unit <CB4RE_MXILINX_reloj_2>.
+    Related source file is "reloj.vf".
+Unit <CB4RE_MXILINX_reloj_2> synthesized.
+
+
+Synthesizing Unit <Circuito_MUSER_reloj>.
+    Related source file is "reloj.vf".
+Unit <Circuito_MUSER_reloj> synthesized.
+
+
+Synthesizing Unit <contador6_MUSER_reloj>.
+    Related source file is "reloj.vf".
+Unit <contador6_MUSER_reloj> synthesized.
+
+
+Synthesizing Unit <conta10_MUSER_reloj>.
+    Related source file is "reloj.vf".
+Unit <conta10_MUSER_reloj> synthesized.
+
+
+Synthesizing Unit <conta2_MUSER_reloj>.
+    Related source file is "reloj.vf".
+Unit <conta2_MUSER_reloj> synthesized.
+
+
+Synthesizing Unit <uHora_MUSER_reloj>.
+    Related source file is "reloj.vf".
+Unit <uHora_MUSER_reloj> synthesized.
+
+
+Synthesizing Unit <contador10_MUSER_reloj>.
+    Related source file is "reloj.vf".
+Unit <contador10_MUSER_reloj> synthesized.
+
+
+Synthesizing Unit <contador5_MUSER_reloj>.
+    Related source file is "reloj.vf".
+Unit <contador5_MUSER_reloj> synthesized.
+
+
+Synthesizing Unit <Contador6Minuto_MUSER_reloj>.
+    Related source file is "reloj.vf".
+Unit <Contador6Minuto_MUSER_reloj> synthesized.
+
+
+Synthesizing Unit <segundo_MUSER_reloj>.
+    Related source file is "reloj.vf".
+Unit <segundo_MUSER_reloj> synthesized.
+
+
+Synthesizing Unit <Alarma_MUSER_reloj>.
+    Related source file is "reloj.vf".
+Unit <Alarma_MUSER_reloj> synthesized.
+
+
+Synthesizing Unit <Minuto_MUSER_reloj>.
+    Related source file is "reloj.vf".
+Unit <Minuto_MUSER_reloj> synthesized.
+
+
+Synthesizing Unit <reloj>.
+    Related source file is "reloj.vf".
+Unit <reloj> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 121
+ Flip-Flops                                            : 121
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <reloj> ...
+
+Optimizing unit <M2_1_MXILINX_reloj_1> ...
+
+Optimizing unit <M2_1_MXILINX_reloj_2> ...
+
+Optimizing unit <M2_1_MXILINX_reloj_3> ...
+
+Optimizing unit <M2_1_MXILINX_reloj_4> ...
+
+Optimizing unit <D2_4E_MXILINX_reloj> ...
+
+Optimizing unit <M2_1E_MXILINX_reloj_1> ...
+
+Optimizing unit <M2_1E_MXILINX_reloj_2> ...
+
+Optimizing unit <FTRSE_MXILINX_reloj_1> ...
+
+Optimizing unit <FTRSE_MXILINX_reloj_2> ...
+
+Optimizing unit <FTRSE_MXILINX_reloj_3> ...
+
+Optimizing unit <FTRSE_MXILINX_reloj_4> ...
+
+Optimizing unit <FTRSE_MXILINX_reloj_5> ...
+
+Optimizing unit <FTRSE_MXILINX_reloj_6> ...
+
+Optimizing unit <FTRSE_MXILINX_reloj_7> ...
+
+Optimizing unit <FTRSE_MXILINX_reloj_8> ...
+
+Optimizing unit <FTRSE_MXILINX_reloj_9> ...
+
+Optimizing unit <FTRSE_MXILINX_reloj_10> ...
+
+Optimizing unit <FTRSE_MXILINX_reloj_11> ...
+
+Optimizing unit <FTRSE_MXILINX_reloj_12> ...
+
+Optimizing unit <FTRSE_MXILINX_reloj_13> ...
+
+Optimizing unit <FTRSE_MXILINX_reloj_14> ...
+
+Optimizing unit <FTRSE_MXILINX_reloj_15> ...
+
+Optimizing unit <FTRSE_MXILINX_reloj_16> ...
+
+Optimizing unit <FTRSE_MXILINX_reloj_17> ...
+
+Optimizing unit <FTRSE_MXILINX_reloj_18> ...
+
+Optimizing unit <FTCE_MXILINX_reloj_2> ...
+
+Optimizing unit <FTCE_MXILINX_reloj_3> ...
+
+Optimizing unit <FTCE_MXILINX_reloj_4> ...
+
+Optimizing unit <FTCE_MXILINX_reloj_5> ...
+
+Optimizing unit <FTCE_MXILINX_reloj_6> ...
+
+Optimizing unit <FTCE_MXILINX_reloj_7> ...
+
+Optimizing unit <FD16CE_MXILINX_reloj> ...
+
+Optimizing unit <COMP16_MXILINX_reloj> ...
+
+Optimizing unit <FTCE_MXILINX_reloj_1> ...
+
+Optimizing unit <FTRSE_MXILINX_reloj_19> ...
+
+Optimizing unit <FTRSE_MXILINX_reloj_20> ...
+
+Optimizing unit <FTRSE_MXILINX_reloj_21> ...
+
+Optimizing unit <FTRSE_MXILINX_reloj_22> ...
+
+Optimizing unit <M4_1E_MXILINX_reloj_1> ...
+
+Optimizing unit <M4_1E_MXILINX_reloj_2> ...
+
+Optimizing unit <M4_1E_MXILINX_reloj_3> ...
+
+Optimizing unit <M4_1E_MXILINX_reloj_4> ...
+
+Optimizing unit <CB2RE_MXILINX_reloj> ...
+
+Optimizing unit <CB16RE_MXILINX_reloj> ...
+
+Optimizing unit <CB4CE_MXILINX_reloj_1> ...
+
+Optimizing unit <CB4CE_MXILINX_reloj_2> ...
+
+Optimizing unit <CB2CE_MXILINX_reloj> ...
+
+Optimizing unit <CB4CE_MXILINX_reloj_3> ...
+
+Optimizing unit <CB4RE_MXILINX_reloj_1> ...
+
+Optimizing unit <CB4RE_MXILINX_reloj_3> ...
+
+Optimizing unit <CB4RE_MXILINX_reloj_2> ...
+
+Optimizing unit <Circuito_MUSER_reloj> ...
+
+Optimizing unit <uHora_MUSER_reloj> ...
+
+Optimizing unit <segundo_MUSER_reloj> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block reloj, actual ratio is 12.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 121
+ Flip-Flops                                            : 121
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : reloj.ngr
+Top Level Output File Name         : reloj
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 20
+
+Cell Usage :
+# BELS                             : 675
+#      AND2                        : 125
+#      AND2B1                      : 4
+#      AND3                        : 36
+#      AND3B1                      : 10
+#      AND3B2                      : 1
+#      AND4                        : 35
+#      AND5                        : 3
+#      GND                         : 21
+#      INV                         : 73
+#      MUXF5                       : 4
+#      OR2                         : 216
+#      OR3                         : 1
+#      VCC                         : 25
+#      XNOR2                       : 16
+#      XOR2                        : 105
+# FlipFlops/Latches                : 121
+#      FDCE                        : 31
+#      FDRE                        : 90
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 19
+#      IBUF                        : 7
+#      OBUF                        : 12
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100ecp132-5 
+
+ Number of Slices:                       61  out of    960     6%  
+ Number of Slice Flip Flops:            121  out of   1920     6%  
+ Number of 4 input LUTs:                 73  out of   1920     3%  
+ Number of IOs:                          20
+ Number of bonded IOBs:                  20  out of     83    24%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------------+----------------------------------------------------+-------+
+Clock Signal                                           | Clock buffer(FF name)                              | Load  |
+-------------------------------------------------------+----------------------------------------------------+-------+
+C                                                      | BUFGP                                              | 43    |
+XLXI_31/O(XLXI_31/I_36_8:O)                            | NONE(*)(XLXI_17/XLXI_28/I_Q0/I_36_35)              | 4     |
+XLXI_28/O(XLXI_28/I_36_8:O)                            | NONE(*)(XLXI_23/XLXI_26/I_Q0/I_36_35)              | 4     |
+XLXI_35/O(XLXI_35/I_36_8:O)                            | NONE(*)(XLXI_34/XLXI_32/I_Q0/I_36_35)              | 2     |
+XLXI_49/XLXN_1(XLXI_49/XLXI_1/XLXI_7/XLXI_4:O)         | NONE(*)(XLXI_49/XLXI_3/XLXI_1/I_Q0/I_36_35)        | 4     |
+XLXI_49/XLXN_5(XLXI_49/XLXI_3/XLXI_4:O)                | NONE(*)(XLXI_49/XLXI_6/XLXI_1/I_Q0/I_36_35)        | 4     |
+XLXI_32/O(XLXI_32/I_36_8:O)                            | NONE(*)(XLXI_44/XLXI_26/I_Q0/I_36_35)              | 4     |
+XLXI_49/XLXI_1/XLXN_21(XLXI_49/XLXI_1/XLXI_14/XLXI_4:O)| NONE(*)(XLXI_49/XLXI_1/XLXI_7/XLXI_1/I_Q0/I_36_35) | 4     |
+XLXI_49/XLXI_1/XLXN_20(XLXI_49/XLXI_1/XLXI_13/XLXI_4:O)| NONE(*)(XLXI_49/XLXI_1/XLXI_14/XLXI_1/I_Q0/I_36_35)| 4     |
+XLXI_49/XLXI_1/XLXN_19(XLXI_49/XLXI_1/XLXI_12/XLXI_4:O)| NONE(*)(XLXI_49/XLXI_1/XLXI_13/XLXI_1/I_Q0/I_36_35)| 4     |
+XLXI_49/XLXI_1/XLXN_24(XLXI_49/XLXI_1/XLXI_11/XLXI_4:O)| NONE(*)(XLXI_49/XLXI_1/XLXI_12/XLXI_1/I_Q0/I_36_35)| 4     |
+XLXI_49/XLXI_1/XLXN_16(XLXI_49/XLXI_1/XLXI_10/XLXI_4:O)| NONE(*)(XLXI_49/XLXI_1/XLXI_11/XLXI_1/I_Q0/I_36_35)| 4     |
+XLXI_49/XLXI_1/XLXN_15(XLXI_49/XLXI_1/XLXI_9/XLXI_4:O) | NONE(*)(XLXI_49/XLXI_1/XLXI_10/XLXI_1/I_Q0/I_36_35)| 4     |
+XLXI_49/XLXI_1/XLXN_31(XLXI_49/XLXI_1/XLXI_1/XLXI_4:O) | NONE(*)(XLXI_49/XLXI_1/XLXI_9/XLXI_1/I_Q0/I_36_35) | 4     |
+XLXI_45/XLXI_6/XLXN_21(XLXI_45/XLXI_6/XLXI_14/XLXI_4:O)| NONE(*)(XLXI_45/XLXI_6/XLXI_7/XLXI_1/I_Q0/I_36_35) | 4     |
+XLXI_45/XLXI_6/XLXN_20(XLXI_45/XLXI_6/XLXI_13/XLXI_4:O)| NONE(*)(XLXI_45/XLXI_6/XLXI_14/XLXI_1/I_Q0/I_36_35)| 4     |
+XLXI_45/XLXI_6/XLXN_19(XLXI_45/XLXI_6/XLXI_12/XLXI_4:O)| NONE(*)(XLXI_45/XLXI_6/XLXI_13/XLXI_1/I_Q0/I_36_35)| 4     |
+XLXI_45/XLXI_6/XLXN_24(XLXI_45/XLXI_6/XLXI_11/XLXI_4:O)| NONE(*)(XLXI_45/XLXI_6/XLXI_12/XLXI_1/I_Q0/I_36_35)| 4     |
+XLXI_45/XLXI_6/XLXN_16(XLXI_45/XLXI_6/XLXI_10/XLXI_4:O)| NONE(*)(XLXI_45/XLXI_6/XLXI_11/XLXI_1/I_Q0/I_36_35)| 4     |
+XLXI_45/XLXI_6/XLXN_15(XLXI_45/XLXI_6/XLXI_9/XLXI_4:O) | NONE(*)(XLXI_45/XLXI_6/XLXI_10/XLXI_1/I_Q0/I_36_35)| 4     |
+XLXI_45/XLXI_6/XLXN_31(XLXI_45/XLXI_6/XLXI_1/XLXI_4:O) | NONE(*)(XLXI_45/XLXI_6/XLXI_9/XLXI_1/I_Q0/I_36_35) | 4     |
+-------------------------------------------------------+----------------------------------------------------+-------+
+(*) These 20 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+-----------------------------------+-------+
+Control Signal                     | Buffer(FF name)                   | Load  |
+-----------------------------------+-----------------------------------+-------+
+HORA<12>(XLXI_46:G)                | NONE(XLXI_45/XLXI_1/I_Q0)         | 17    |
+XLXI_23/XLXN_48(XLXI_23/XLXI_27:O) | NONE(XLXI_23/XLXI_26/I_Q0/I_36_35)| 4     |
+XLXI_44/XLXN_77(XLXI_44/XLXI_33:O) | NONE(XLXI_44/XLXI_26/I_Q0/I_36_35)| 4     |
+XLXN_81(XLXI_17/XLXI_4:O)          | NONE(XLXI_17/XLXI_28/I_Q0/I_36_35)| 4     |
+XLXI_34/XLXN_56(XLXI_34/XLXI_35:O) | NONE(XLXI_34/XLXI_32/I_Q0/I_36_35)| 2     |
+-----------------------------------+-----------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 7.987ns (Maximum Frequency: 125.211MHz)
+   Minimum input arrival time before clock: 2.468ns
+   Maximum output required time after clock: 10.303ns
+   Maximum combinational path delay: 6.963ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'C'
+  Clock period: 7.987ns (frequency: 125.211MHz)
+  Total number of paths / destination ports: 224 / 37
+-------------------------------------------------------------------------
+Delay:               7.987ns (Levels of Logic = 8)
+  Source:            XLXI_2/XLXI_82/I_Q0/I_36_35 (FF)
+  Destination:       XLXI_2/XLXI_81/I_Q0/I_36_35 (FF)
+  Source Clock:      C rising
+  Destination Clock: C rising
+
+  Data Path: XLXI_2/XLXI_82/I_Q0/I_36_35 to XLXI_2/XLXI_81/I_Q0/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             5   0.514   0.538  I_36_35 (Q)
+     end scope: 'I_Q0'
+     AND4:I3->O            5   0.612   0.538  I_36_32 (T4)
+     AND5:I4->O            5   0.612   0.538  I_36_31 (T8)
+     AND5:I4->O            5   0.612   0.538  I_36_20 (T12)
+     AND5:I4->O            1   0.612   0.357  I_36_27 (TC)
+     AND2:I1->O            3   0.612   0.451  I_36_58 (CEO)
+     end scope: 'XLXI_2/XLXI_82'
+     begin scope: 'XLXI_2/XLXI_81'
+     begin scope: 'I_Q0'
+     OR2:I0->O             1   0.612   0.357  I_36_77 (CE_S)
+     FDRE:CE                   0.483          I_36_35
+    ----------------------------------------
+    Total                      7.987ns (4.669ns logic, 3.318ns route)
+                                       (58.5% logic, 41.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_31/O'
+  Clock period: 3.417ns (frequency: 292.654MHz)
+  Total number of paths / destination ports: 10 / 4
+-------------------------------------------------------------------------
+Delay:               3.417ns (Levels of Logic = 3)
+  Source:            XLXI_17/XLXI_28/I_Q0/I_36_35 (FF)
+  Destination:       XLXI_17/XLXI_28/I_Q2/I_36_35 (FF)
+  Source Clock:      XLXI_31/O rising
+  Destination Clock: XLXI_31/O rising
+
+  Data Path: XLXI_17/XLXI_28/I_Q0/I_36_35 to XLXI_17/XLXI_28/I_Q2/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             9   0.514   0.697  I_36_35 (Q)
+     end scope: 'I_Q0'
+     AND3:I2->O            1   0.612   0.357  I_36_32 (T3)
+     begin scope: 'I_Q3'
+     XOR2:I0->O            1   0.612   0.357  I_36_32 (TQ)
+     FDCE:D                    0.268          I_36_35
+    ----------------------------------------
+    Total                      3.417ns (2.006ns logic, 1.411ns route)
+                                       (58.7% logic, 41.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_28/O'
+  Clock period: 3.417ns (frequency: 292.654MHz)
+  Total number of paths / destination ports: 10 / 4
+-------------------------------------------------------------------------
+Delay:               3.417ns (Levels of Logic = 3)
+  Source:            XLXI_23/XLXI_26/I_Q0/I_36_35 (FF)
+  Destination:       XLXI_23/XLXI_26/I_Q2/I_36_35 (FF)
+  Source Clock:      XLXI_28/O rising
+  Destination Clock: XLXI_28/O rising
+
+  Data Path: XLXI_23/XLXI_26/I_Q0/I_36_35 to XLXI_23/XLXI_26/I_Q2/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             9   0.514   0.697  I_36_35 (Q)
+     end scope: 'I_Q0'
+     AND3:I2->O            1   0.612   0.357  I_36_32 (T3)
+     begin scope: 'I_Q3'
+     XOR2:I0->O            1   0.612   0.357  I_36_32 (TQ)
+     FDCE:D                    0.268          I_36_35
+    ----------------------------------------
+    Total                      3.417ns (2.006ns logic, 1.411ns route)
+                                       (58.7% logic, 41.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_35/O'
+  Clock period: 2.394ns (frequency: 417.632MHz)
+  Total number of paths / destination ports: 3 / 2
+-------------------------------------------------------------------------
+Delay:               2.394ns (Levels of Logic = 1)
+  Source:            XLXI_34/XLXI_32/I_Q0/I_36_35 (FF)
+  Destination:       XLXI_34/XLXI_32/I_Q0/I_36_35 (FF)
+  Source Clock:      XLXI_35/O rising
+  Destination Clock: XLXI_35/O rising
+
+  Data Path: XLXI_34/XLXI_32/I_Q0/I_36_35 to XLXI_34/XLXI_32/I_Q0/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             8   0.514   0.643  I_36_35 (Q)
+     end scope: 'I_Q0'
+     begin scope: 'I_Q1'
+     XOR2:I0->O            1   0.612   0.357  I_36_32 (TQ)
+     FDCE:D                    0.268          I_36_35
+    ----------------------------------------
+    Total                      2.394ns (1.394ns logic, 1.000ns route)
+                                       (58.2% logic, 41.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_49/XLXN_1'
+  Clock period: 5.040ns (frequency: 198.393MHz)
+  Total number of paths / destination ports: 26 / 8
+-------------------------------------------------------------------------
+Delay:               5.040ns (Levels of Logic = 5)
+  Source:            XLXI_49/XLXI_3/XLXI_1/I_Q1/I_36_35 (FF)
+  Destination:       XLXI_49/XLXI_3/XLXI_1/I_Q0/I_36_35 (FF)
+  Source Clock:      XLXI_49/XLXN_1 rising
+  Destination Clock: XLXI_49/XLXN_1 rising
+
+  Data Path: XLXI_49/XLXI_3/XLXI_1/I_Q1/I_36_35 to XLXI_49/XLXI_3/XLXI_1/I_Q0/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             5   0.514   0.538  I_36_35 (Q)
+     end scope: 'I_Q1'
+     end scope: 'XLXI_49/XLXI_3/XLXI_1'
+     INV:I->O              1   0.612   0.357  XLXI_49/XLXI_3/XLXI_14 (XLXI_49/XLXI_3/XLXN_20)
+     AND2:I0->O            1   0.612   0.357  XLXI_49/XLXI_3/XLXI_2 (XLXI_49/XLXI_3/XLXN_3)
+     AND2:I1->O            8   0.612   0.643  XLXI_49/XLXI_3/XLXI_4 (XLXI_49/XLXN_5)
+     begin scope: 'XLXI_49/XLXI_3/XLXI_1'
+     begin scope: 'I_Q0'
+     FDRE:R                    0.795          I_36_35
+    ----------------------------------------
+    Total                      5.040ns (3.145ns logic, 1.896ns route)
+                                       (62.4% logic, 37.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_49/XLXN_5'
+  Clock period: 4.935ns (frequency: 202.630MHz)
+  Total number of paths / destination ports: 26 / 8
+-------------------------------------------------------------------------
+Delay:               4.935ns (Levels of Logic = 5)
+  Source:            XLXI_49/XLXI_6/XLXI_1/I_Q1/I_36_35 (FF)
+  Destination:       XLXI_49/XLXI_6/XLXI_1/I_Q0/I_36_35 (FF)
+  Source Clock:      XLXI_49/XLXN_5 rising
+  Destination Clock: XLXI_49/XLXN_5 rising
+
+  Data Path: XLXI_49/XLXI_6/XLXI_1/I_Q1/I_36_35 to XLXI_49/XLXI_6/XLXI_1/I_Q0/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             5   0.514   0.538  I_36_35 (Q)
+     end scope: 'I_Q1'
+     end scope: 'XLXI_49/XLXI_6/XLXI_1'
+     INV:I->O              1   0.612   0.357  XLXI_49/XLXI_6/XLXI_14 (XLXI_49/XLXI_6/XLXN_20)
+     AND2:I0->O            1   0.612   0.357  XLXI_49/XLXI_6/XLXI_2 (XLXI_49/XLXI_6/XLXN_3)
+     AND2:I1->O            5   0.612   0.538  XLXI_49/XLXI_6/XLXI_4 (XLXN_76)
+     begin scope: 'XLXI_49/XLXI_6/XLXI_1'
+     begin scope: 'I_Q0'
+     FDRE:R                    0.795          I_36_35
+    ----------------------------------------
+    Total                      4.935ns (3.145ns logic, 1.790ns route)
+                                       (63.7% logic, 36.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_32/O'
+  Clock period: 3.470ns (frequency: 288.209MHz)
+  Total number of paths / destination ports: 10 / 4
+-------------------------------------------------------------------------
+Delay:               3.470ns (Levels of Logic = 3)
+  Source:            XLXI_44/XLXI_26/I_Q0/I_36_35 (FF)
+  Destination:       XLXI_44/XLXI_26/I_Q2/I_36_35 (FF)
+  Source Clock:      XLXI_32/O rising
+  Destination Clock: XLXI_32/O rising
+
+  Data Path: XLXI_44/XLXI_26/I_Q0/I_36_35 to XLXI_44/XLXI_26/I_Q2/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            10   0.514   0.750  I_36_35 (Q)
+     end scope: 'I_Q0'
+     AND3:I2->O            1   0.612   0.357  I_36_32 (T3)
+     begin scope: 'I_Q3'
+     XOR2:I0->O            1   0.612   0.357  I_36_32 (TQ)
+     FDCE:D                    0.268          I_36_35
+    ----------------------------------------
+    Total                      3.470ns (2.006ns logic, 1.464ns route)
+                                       (57.8% logic, 42.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_49/XLXI_1/XLXN_21'
+  Clock period: 5.071ns (frequency: 197.196MHz)
+  Total number of paths / destination ports: 26 / 8
+-------------------------------------------------------------------------
+Delay:               5.071ns (Levels of Logic = 5)
+  Source:            XLXI_49/XLXI_1/XLXI_7/XLXI_1/I_Q0/I_36_35 (FF)
+  Destination:       XLXI_49/XLXI_1/XLXI_7/XLXI_1/I_Q0/I_36_35 (FF)
+  Source Clock:      XLXI_49/XLXI_1/XLXN_21 rising
+  Destination Clock: XLXI_49/XLXI_1/XLXN_21 rising
+
+  Data Path: XLXI_49/XLXI_1/XLXI_7/XLXI_1/I_Q0/I_36_35 to XLXI_49/XLXI_1/XLXI_7/XLXI_1/I_Q0/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             6   0.514   0.569  I_36_35 (Q)
+     end scope: 'I_Q0'
+     end scope: 'XLXI_49/XLXI_1/XLXI_7/XLXI_1'
+     INV:I->O              1   0.612   0.357  XLXI_49/XLXI_1/XLXI_7/XLXI_17 (XLXI_49/XLXI_1/XLXI_7/XLXN_24)
+     AND2:I1->O            1   0.612   0.357  XLXI_49/XLXI_1/XLXI_7/XLXI_2 (XLXI_49/XLXI_1/XLXI_7/XLXN_3)
+     AND2:I1->O            8   0.612   0.643  XLXI_49/XLXI_1/XLXI_7/XLXI_4 (XLXI_49/XLXN_1)
+     begin scope: 'XLXI_49/XLXI_1/XLXI_7/XLXI_1'
+     begin scope: 'I_Q0'
+     FDRE:R                    0.795          I_36_35
+    ----------------------------------------
+    Total                      5.071ns (3.145ns logic, 1.926ns route)
+                                       (62.0% logic, 38.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_49/XLXI_1/XLXN_20'
+  Clock period: 5.040ns (frequency: 198.393MHz)
+  Total number of paths / destination ports: 26 / 8
+-------------------------------------------------------------------------
+Delay:               5.040ns (Levels of Logic = 5)
+  Source:            XLXI_49/XLXI_1/XLXI_14/XLXI_1/I_Q1/I_36_35 (FF)
+  Destination:       XLXI_49/XLXI_1/XLXI_14/XLXI_1/I_Q0/I_36_35 (FF)
+  Source Clock:      XLXI_49/XLXI_1/XLXN_20 rising
+  Destination Clock: XLXI_49/XLXI_1/XLXN_20 rising
+
+  Data Path: XLXI_49/XLXI_1/XLXI_14/XLXI_1/I_Q1/I_36_35 to XLXI_49/XLXI_1/XLXI_14/XLXI_1/I_Q0/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             5   0.514   0.538  I_36_35 (Q)
+     end scope: 'I_Q1'
+     end scope: 'XLXI_49/XLXI_1/XLXI_14/XLXI_1'
+     INV:I->O              1   0.612   0.357  XLXI_49/XLXI_1/XLXI_14/XLXI_14 (XLXI_49/XLXI_1/XLXI_14/XLXN_20)
+     AND2:I0->O            1   0.612   0.357  XLXI_49/XLXI_1/XLXI_14/XLXI_2 (XLXI_49/XLXI_1/XLXI_14/XLXN_3)
+     AND2:I1->O            8   0.612   0.643  XLXI_49/XLXI_1/XLXI_14/XLXI_4 (XLXI_49/XLXI_1/XLXN_21)
+     begin scope: 'XLXI_49/XLXI_1/XLXI_14/XLXI_1'
+     begin scope: 'I_Q0'
+     FDRE:R                    0.795          I_36_35
+    ----------------------------------------
+    Total                      5.040ns (3.145ns logic, 1.896ns route)
+                                       (62.4% logic, 37.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_49/XLXI_1/XLXN_19'
+  Clock period: 5.040ns (frequency: 198.393MHz)
+  Total number of paths / destination ports: 26 / 8
+-------------------------------------------------------------------------
+Delay:               5.040ns (Levels of Logic = 5)
+  Source:            XLXI_49/XLXI_1/XLXI_13/XLXI_1/I_Q1/I_36_35 (FF)
+  Destination:       XLXI_49/XLXI_1/XLXI_13/XLXI_1/I_Q0/I_36_35 (FF)
+  Source Clock:      XLXI_49/XLXI_1/XLXN_19 rising
+  Destination Clock: XLXI_49/XLXI_1/XLXN_19 rising
+
+  Data Path: XLXI_49/XLXI_1/XLXI_13/XLXI_1/I_Q1/I_36_35 to XLXI_49/XLXI_1/XLXI_13/XLXI_1/I_Q0/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             5   0.514   0.538  I_36_35 (Q)
+     end scope: 'I_Q1'
+     end scope: 'XLXI_49/XLXI_1/XLXI_13/XLXI_1'
+     INV:I->O              1   0.612   0.357  XLXI_49/XLXI_1/XLXI_13/XLXI_14 (XLXI_49/XLXI_1/XLXI_13/XLXN_20)
+     AND2:I0->O            1   0.612   0.357  XLXI_49/XLXI_1/XLXI_13/XLXI_2 (XLXI_49/XLXI_1/XLXI_13/XLXN_3)
+     AND2:I1->O            8   0.612   0.643  XLXI_49/XLXI_1/XLXI_13/XLXI_4 (XLXI_49/XLXI_1/XLXN_20)
+     begin scope: 'XLXI_49/XLXI_1/XLXI_13/XLXI_1'
+     begin scope: 'I_Q0'
+     FDRE:R                    0.795          I_36_35
+    ----------------------------------------
+    Total                      5.040ns (3.145ns logic, 1.896ns route)
+                                       (62.4% logic, 37.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_49/XLXI_1/XLXN_24'
+  Clock period: 5.040ns (frequency: 198.393MHz)
+  Total number of paths / destination ports: 26 / 8
+-------------------------------------------------------------------------
+Delay:               5.040ns (Levels of Logic = 5)
+  Source:            XLXI_49/XLXI_1/XLXI_12/XLXI_1/I_Q1/I_36_35 (FF)
+  Destination:       XLXI_49/XLXI_1/XLXI_12/XLXI_1/I_Q0/I_36_35 (FF)
+  Source Clock:      XLXI_49/XLXI_1/XLXN_24 rising
+  Destination Clock: XLXI_49/XLXI_1/XLXN_24 rising
+
+  Data Path: XLXI_49/XLXI_1/XLXI_12/XLXI_1/I_Q1/I_36_35 to XLXI_49/XLXI_1/XLXI_12/XLXI_1/I_Q0/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             5   0.514   0.538  I_36_35 (Q)
+     end scope: 'I_Q1'
+     end scope: 'XLXI_49/XLXI_1/XLXI_12/XLXI_1'
+     INV:I->O              1   0.612   0.357  XLXI_49/XLXI_1/XLXI_12/XLXI_14 (XLXI_49/XLXI_1/XLXI_12/XLXN_20)
+     AND2:I0->O            1   0.612   0.357  XLXI_49/XLXI_1/XLXI_12/XLXI_2 (XLXI_49/XLXI_1/XLXI_12/XLXN_3)
+     AND2:I1->O            8   0.612   0.643  XLXI_49/XLXI_1/XLXI_12/XLXI_4 (XLXI_49/XLXI_1/XLXN_19)
+     begin scope: 'XLXI_49/XLXI_1/XLXI_12/XLXI_1'
+     begin scope: 'I_Q0'
+     FDRE:R                    0.795          I_36_35
+    ----------------------------------------
+    Total                      5.040ns (3.145ns logic, 1.896ns route)
+                                       (62.4% logic, 37.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_49/XLXI_1/XLXN_16'
+  Clock period: 5.040ns (frequency: 198.393MHz)
+  Total number of paths / destination ports: 26 / 8
+-------------------------------------------------------------------------
+Delay:               5.040ns (Levels of Logic = 5)
+  Source:            XLXI_49/XLXI_1/XLXI_11/XLXI_1/I_Q1/I_36_35 (FF)
+  Destination:       XLXI_49/XLXI_1/XLXI_11/XLXI_1/I_Q0/I_36_35 (FF)
+  Source Clock:      XLXI_49/XLXI_1/XLXN_16 rising
+  Destination Clock: XLXI_49/XLXI_1/XLXN_16 rising
+
+  Data Path: XLXI_49/XLXI_1/XLXI_11/XLXI_1/I_Q1/I_36_35 to XLXI_49/XLXI_1/XLXI_11/XLXI_1/I_Q0/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             5   0.514   0.538  I_36_35 (Q)
+     end scope: 'I_Q1'
+     end scope: 'XLXI_49/XLXI_1/XLXI_11/XLXI_1'
+     INV:I->O              1   0.612   0.357  XLXI_49/XLXI_1/XLXI_11/XLXI_14 (XLXI_49/XLXI_1/XLXI_11/XLXN_20)
+     AND2:I0->O            1   0.612   0.357  XLXI_49/XLXI_1/XLXI_11/XLXI_2 (XLXI_49/XLXI_1/XLXI_11/XLXN_3)
+     AND2:I1->O            8   0.612   0.643  XLXI_49/XLXI_1/XLXI_11/XLXI_4 (XLXI_49/XLXI_1/XLXN_24)
+     begin scope: 'XLXI_49/XLXI_1/XLXI_11/XLXI_1'
+     begin scope: 'I_Q0'
+     FDRE:R                    0.795          I_36_35
+    ----------------------------------------
+    Total                      5.040ns (3.145ns logic, 1.896ns route)
+                                       (62.4% logic, 37.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_49/XLXI_1/XLXN_15'
+  Clock period: 5.040ns (frequency: 198.393MHz)
+  Total number of paths / destination ports: 26 / 8
+-------------------------------------------------------------------------
+Delay:               5.040ns (Levels of Logic = 5)
+  Source:            XLXI_49/XLXI_1/XLXI_10/XLXI_1/I_Q1/I_36_35 (FF)
+  Destination:       XLXI_49/XLXI_1/XLXI_10/XLXI_1/I_Q0/I_36_35 (FF)
+  Source Clock:      XLXI_49/XLXI_1/XLXN_15 rising
+  Destination Clock: XLXI_49/XLXI_1/XLXN_15 rising
+
+  Data Path: XLXI_49/XLXI_1/XLXI_10/XLXI_1/I_Q1/I_36_35 to XLXI_49/XLXI_1/XLXI_10/XLXI_1/I_Q0/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             5   0.514   0.538  I_36_35 (Q)
+     end scope: 'I_Q1'
+     end scope: 'XLXI_49/XLXI_1/XLXI_10/XLXI_1'
+     INV:I->O              1   0.612   0.357  XLXI_49/XLXI_1/XLXI_10/XLXI_14 (XLXI_49/XLXI_1/XLXI_10/XLXN_20)
+     AND2:I0->O            1   0.612   0.357  XLXI_49/XLXI_1/XLXI_10/XLXI_2 (XLXI_49/XLXI_1/XLXI_10/XLXN_3)
+     AND2:I1->O            8   0.612   0.643  XLXI_49/XLXI_1/XLXI_10/XLXI_4 (XLXI_49/XLXI_1/XLXN_16)
+     begin scope: 'XLXI_49/XLXI_1/XLXI_10/XLXI_1'
+     begin scope: 'I_Q0'
+     FDRE:R                    0.795          I_36_35
+    ----------------------------------------
+    Total                      5.040ns (3.145ns logic, 1.896ns route)
+                                       (62.4% logic, 37.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_49/XLXI_1/XLXN_31'
+  Clock period: 5.040ns (frequency: 198.393MHz)
+  Total number of paths / destination ports: 26 / 8
+-------------------------------------------------------------------------
+Delay:               5.040ns (Levels of Logic = 5)
+  Source:            XLXI_49/XLXI_1/XLXI_9/XLXI_1/I_Q1/I_36_35 (FF)
+  Destination:       XLXI_49/XLXI_1/XLXI_9/XLXI_1/I_Q0/I_36_35 (FF)
+  Source Clock:      XLXI_49/XLXI_1/XLXN_31 rising
+  Destination Clock: XLXI_49/XLXI_1/XLXN_31 rising
+
+  Data Path: XLXI_49/XLXI_1/XLXI_9/XLXI_1/I_Q1/I_36_35 to XLXI_49/XLXI_1/XLXI_9/XLXI_1/I_Q0/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             5   0.514   0.538  I_36_35 (Q)
+     end scope: 'I_Q1'
+     end scope: 'XLXI_49/XLXI_1/XLXI_9/XLXI_1'
+     INV:I->O              1   0.612   0.357  XLXI_49/XLXI_1/XLXI_9/XLXI_14 (XLXI_49/XLXI_1/XLXI_9/XLXN_20)
+     AND2:I0->O            1   0.612   0.357  XLXI_49/XLXI_1/XLXI_9/XLXI_2 (XLXI_49/XLXI_1/XLXI_9/XLXN_3)
+     AND2:I1->O            8   0.612   0.643  XLXI_49/XLXI_1/XLXI_9/XLXI_4 (XLXI_49/XLXI_1/XLXN_15)
+     begin scope: 'XLXI_49/XLXI_1/XLXI_9/XLXI_1'
+     begin scope: 'I_Q0'
+     FDRE:R                    0.795          I_36_35
+    ----------------------------------------
+    Total                      5.040ns (3.145ns logic, 1.896ns route)
+                                       (62.4% logic, 37.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_45/XLXI_6/XLXN_21'
+  Clock period: 4.966ns (frequency: 201.381MHz)
+  Total number of paths / destination ports: 26 / 8
+-------------------------------------------------------------------------
+Delay:               4.966ns (Levels of Logic = 5)
+  Source:            XLXI_45/XLXI_6/XLXI_7/XLXI_1/I_Q0/I_36_35 (FF)
+  Destination:       XLXI_45/XLXI_6/XLXI_7/XLXI_1/I_Q0/I_36_35 (FF)
+  Source Clock:      XLXI_45/XLXI_6/XLXN_21 rising
+  Destination Clock: XLXI_45/XLXI_6/XLXN_21 rising
+
+  Data Path: XLXI_45/XLXI_6/XLXI_7/XLXI_1/I_Q0/I_36_35 to XLXI_45/XLXI_6/XLXI_7/XLXI_1/I_Q0/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             6   0.514   0.569  I_36_35 (Q)
+     end scope: 'I_Q0'
+     end scope: 'XLXI_45/XLXI_6/XLXI_7/XLXI_1'
+     INV:I->O              1   0.612   0.357  XLXI_45/XLXI_6/XLXI_7/XLXI_17 (XLXI_45/XLXI_6/XLXI_7/XLXN_24)
+     AND2:I1->O            1   0.612   0.357  XLXI_45/XLXI_6/XLXI_7/XLXI_2 (XLXI_45/XLXI_6/XLXI_7/XLXN_3)
+     AND2:I1->O            5   0.612   0.538  XLXI_45/XLXI_6/XLXI_7/XLXI_4 (XLXI_45/XLXN_10)
+     begin scope: 'XLXI_45/XLXI_6/XLXI_7/XLXI_1'
+     begin scope: 'I_Q0'
+     FDRE:R                    0.795          I_36_35
+    ----------------------------------------
+    Total                      4.966ns (3.145ns logic, 1.821ns route)
+                                       (63.3% logic, 36.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_45/XLXI_6/XLXN_20'
+  Clock period: 5.040ns (frequency: 198.393MHz)
+  Total number of paths / destination ports: 26 / 8
+-------------------------------------------------------------------------
+Delay:               5.040ns (Levels of Logic = 5)
+  Source:            XLXI_45/XLXI_6/XLXI_14/XLXI_1/I_Q1/I_36_35 (FF)
+  Destination:       XLXI_45/XLXI_6/XLXI_14/XLXI_1/I_Q0/I_36_35 (FF)
+  Source Clock:      XLXI_45/XLXI_6/XLXN_20 rising
+  Destination Clock: XLXI_45/XLXI_6/XLXN_20 rising
+
+  Data Path: XLXI_45/XLXI_6/XLXI_14/XLXI_1/I_Q1/I_36_35 to XLXI_45/XLXI_6/XLXI_14/XLXI_1/I_Q0/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             5   0.514   0.538  I_36_35 (Q)
+     end scope: 'I_Q1'
+     end scope: 'XLXI_45/XLXI_6/XLXI_14/XLXI_1'
+     INV:I->O              1   0.612   0.357  XLXI_45/XLXI_6/XLXI_14/XLXI_14 (XLXI_45/XLXI_6/XLXI_14/XLXN_20)
+     AND2:I0->O            1   0.612   0.357  XLXI_45/XLXI_6/XLXI_14/XLXI_2 (XLXI_45/XLXI_6/XLXI_14/XLXN_3)
+     AND2:I1->O            8   0.612   0.643  XLXI_45/XLXI_6/XLXI_14/XLXI_4 (XLXI_45/XLXI_6/XLXN_21)
+     begin scope: 'XLXI_45/XLXI_6/XLXI_14/XLXI_1'
+     begin scope: 'I_Q0'
+     FDRE:R                    0.795          I_36_35
+    ----------------------------------------
+    Total                      5.040ns (3.145ns logic, 1.896ns route)
+                                       (62.4% logic, 37.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_45/XLXI_6/XLXN_19'
+  Clock period: 5.040ns (frequency: 198.393MHz)
+  Total number of paths / destination ports: 26 / 8
+-------------------------------------------------------------------------
+Delay:               5.040ns (Levels of Logic = 5)
+  Source:            XLXI_45/XLXI_6/XLXI_13/XLXI_1/I_Q1/I_36_35 (FF)
+  Destination:       XLXI_45/XLXI_6/XLXI_13/XLXI_1/I_Q0/I_36_35 (FF)
+  Source Clock:      XLXI_45/XLXI_6/XLXN_19 rising
+  Destination Clock: XLXI_45/XLXI_6/XLXN_19 rising
+
+  Data Path: XLXI_45/XLXI_6/XLXI_13/XLXI_1/I_Q1/I_36_35 to XLXI_45/XLXI_6/XLXI_13/XLXI_1/I_Q0/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             5   0.514   0.538  I_36_35 (Q)
+     end scope: 'I_Q1'
+     end scope: 'XLXI_45/XLXI_6/XLXI_13/XLXI_1'
+     INV:I->O              1   0.612   0.357  XLXI_45/XLXI_6/XLXI_13/XLXI_14 (XLXI_45/XLXI_6/XLXI_13/XLXN_20)
+     AND2:I0->O            1   0.612   0.357  XLXI_45/XLXI_6/XLXI_13/XLXI_2 (XLXI_45/XLXI_6/XLXI_13/XLXN_3)
+     AND2:I1->O            8   0.612   0.643  XLXI_45/XLXI_6/XLXI_13/XLXI_4 (XLXI_45/XLXI_6/XLXN_20)
+     begin scope: 'XLXI_45/XLXI_6/XLXI_13/XLXI_1'
+     begin scope: 'I_Q0'
+     FDRE:R                    0.795          I_36_35
+    ----------------------------------------
+    Total                      5.040ns (3.145ns logic, 1.896ns route)
+                                       (62.4% logic, 37.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_45/XLXI_6/XLXN_24'
+  Clock period: 5.040ns (frequency: 198.393MHz)
+  Total number of paths / destination ports: 26 / 8
+-------------------------------------------------------------------------
+Delay:               5.040ns (Levels of Logic = 5)
+  Source:            XLXI_45/XLXI_6/XLXI_12/XLXI_1/I_Q1/I_36_35 (FF)
+  Destination:       XLXI_45/XLXI_6/XLXI_12/XLXI_1/I_Q0/I_36_35 (FF)
+  Source Clock:      XLXI_45/XLXI_6/XLXN_24 rising
+  Destination Clock: XLXI_45/XLXI_6/XLXN_24 rising
+
+  Data Path: XLXI_45/XLXI_6/XLXI_12/XLXI_1/I_Q1/I_36_35 to XLXI_45/XLXI_6/XLXI_12/XLXI_1/I_Q0/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             5   0.514   0.538  I_36_35 (Q)
+     end scope: 'I_Q1'
+     end scope: 'XLXI_45/XLXI_6/XLXI_12/XLXI_1'
+     INV:I->O              1   0.612   0.357  XLXI_45/XLXI_6/XLXI_12/XLXI_14 (XLXI_45/XLXI_6/XLXI_12/XLXN_20)
+     AND2:I0->O            1   0.612   0.357  XLXI_45/XLXI_6/XLXI_12/XLXI_2 (XLXI_45/XLXI_6/XLXI_12/XLXN_3)
+     AND2:I1->O            8   0.612   0.643  XLXI_45/XLXI_6/XLXI_12/XLXI_4 (XLXI_45/XLXI_6/XLXN_19)
+     begin scope: 'XLXI_45/XLXI_6/XLXI_12/XLXI_1'
+     begin scope: 'I_Q0'
+     FDRE:R                    0.795          I_36_35
+    ----------------------------------------
+    Total                      5.040ns (3.145ns logic, 1.896ns route)
+                                       (62.4% logic, 37.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_45/XLXI_6/XLXN_16'
+  Clock period: 5.040ns (frequency: 198.393MHz)
+  Total number of paths / destination ports: 26 / 8
+-------------------------------------------------------------------------
+Delay:               5.040ns (Levels of Logic = 5)
+  Source:            XLXI_45/XLXI_6/XLXI_11/XLXI_1/I_Q1/I_36_35 (FF)
+  Destination:       XLXI_45/XLXI_6/XLXI_11/XLXI_1/I_Q0/I_36_35 (FF)
+  Source Clock:      XLXI_45/XLXI_6/XLXN_16 rising
+  Destination Clock: XLXI_45/XLXI_6/XLXN_16 rising
+
+  Data Path: XLXI_45/XLXI_6/XLXI_11/XLXI_1/I_Q1/I_36_35 to XLXI_45/XLXI_6/XLXI_11/XLXI_1/I_Q0/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             5   0.514   0.538  I_36_35 (Q)
+     end scope: 'I_Q1'
+     end scope: 'XLXI_45/XLXI_6/XLXI_11/XLXI_1'
+     INV:I->O              1   0.612   0.357  XLXI_45/XLXI_6/XLXI_11/XLXI_14 (XLXI_45/XLXI_6/XLXI_11/XLXN_20)
+     AND2:I0->O            1   0.612   0.357  XLXI_45/XLXI_6/XLXI_11/XLXI_2 (XLXI_45/XLXI_6/XLXI_11/XLXN_3)
+     AND2:I1->O            8   0.612   0.643  XLXI_45/XLXI_6/XLXI_11/XLXI_4 (XLXI_45/XLXI_6/XLXN_24)
+     begin scope: 'XLXI_45/XLXI_6/XLXI_11/XLXI_1'
+     begin scope: 'I_Q0'
+     FDRE:R                    0.795          I_36_35
+    ----------------------------------------
+    Total                      5.040ns (3.145ns logic, 1.896ns route)
+                                       (62.4% logic, 37.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_45/XLXI_6/XLXN_15'
+  Clock period: 5.040ns (frequency: 198.393MHz)
+  Total number of paths / destination ports: 26 / 8
+-------------------------------------------------------------------------
+Delay:               5.040ns (Levels of Logic = 5)
+  Source:            XLXI_45/XLXI_6/XLXI_10/XLXI_1/I_Q1/I_36_35 (FF)
+  Destination:       XLXI_45/XLXI_6/XLXI_10/XLXI_1/I_Q0/I_36_35 (FF)
+  Source Clock:      XLXI_45/XLXI_6/XLXN_15 rising
+  Destination Clock: XLXI_45/XLXI_6/XLXN_15 rising
+
+  Data Path: XLXI_45/XLXI_6/XLXI_10/XLXI_1/I_Q1/I_36_35 to XLXI_45/XLXI_6/XLXI_10/XLXI_1/I_Q0/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             5   0.514   0.538  I_36_35 (Q)
+     end scope: 'I_Q1'
+     end scope: 'XLXI_45/XLXI_6/XLXI_10/XLXI_1'
+     INV:I->O              1   0.612   0.357  XLXI_45/XLXI_6/XLXI_10/XLXI_14 (XLXI_45/XLXI_6/XLXI_10/XLXN_20)
+     AND2:I0->O            1   0.612   0.357  XLXI_45/XLXI_6/XLXI_10/XLXI_2 (XLXI_45/XLXI_6/XLXI_10/XLXN_3)
+     AND2:I1->O            8   0.612   0.643  XLXI_45/XLXI_6/XLXI_10/XLXI_4 (XLXI_45/XLXI_6/XLXN_16)
+     begin scope: 'XLXI_45/XLXI_6/XLXI_10/XLXI_1'
+     begin scope: 'I_Q0'
+     FDRE:R                    0.795          I_36_35
+    ----------------------------------------
+    Total                      5.040ns (3.145ns logic, 1.896ns route)
+                                       (62.4% logic, 37.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXI_45/XLXI_6/XLXN_31'
+  Clock period: 5.040ns (frequency: 198.393MHz)
+  Total number of paths / destination ports: 26 / 8
+-------------------------------------------------------------------------
+Delay:               5.040ns (Levels of Logic = 5)
+  Source:            XLXI_45/XLXI_6/XLXI_9/XLXI_1/I_Q1/I_36_35 (FF)
+  Destination:       XLXI_45/XLXI_6/XLXI_9/XLXI_1/I_Q0/I_36_35 (FF)
+  Source Clock:      XLXI_45/XLXI_6/XLXN_31 rising
+  Destination Clock: XLXI_45/XLXI_6/XLXN_31 rising
+
+  Data Path: XLXI_45/XLXI_6/XLXI_9/XLXI_1/I_Q1/I_36_35 to XLXI_45/XLXI_6/XLXI_9/XLXI_1/I_Q0/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             5   0.514   0.538  I_36_35 (Q)
+     end scope: 'I_Q1'
+     end scope: 'XLXI_45/XLXI_6/XLXI_9/XLXI_1'
+     INV:I->O              1   0.612   0.357  XLXI_45/XLXI_6/XLXI_9/XLXI_14 (XLXI_45/XLXI_6/XLXI_9/XLXN_20)
+     AND2:I0->O            1   0.612   0.357  XLXI_45/XLXI_6/XLXI_9/XLXI_2 (XLXI_45/XLXI_6/XLXI_9/XLXN_3)
+     AND2:I1->O            8   0.612   0.643  XLXI_45/XLXI_6/XLXI_9/XLXI_4 (XLXI_45/XLXI_6/XLXN_15)
+     begin scope: 'XLXI_45/XLXI_6/XLXI_9/XLXI_1'
+     begin scope: 'I_Q0'
+     FDRE:R                    0.795          I_36_35
+    ----------------------------------------
+    Total                      5.040ns (3.145ns logic, 1.896ns route)
+                                       (62.4% logic, 37.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'C'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              2.468ns (Levels of Logic = 2)
+  Source:            CE (PAD)
+  Destination:       XLXI_45/XLXI_1/I_Q0 (FF)
+  Destination Clock: C rising
+
+  Data Path: CE to XLXI_45/XLXI_1/I_Q0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            16   1.106   0.879  CE_IBUF (CE_IBUF)
+     begin scope: 'XLXI_45/XLXI_1'
+     FDCE:CE                   0.483          I_Q0
+    ----------------------------------------
+    Total                      2.468ns (1.589ns logic, 0.879ns route)
+                                       (64.4% logic, 35.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'C'
+  Total number of paths / destination ports: 255 / 12
+-------------------------------------------------------------------------
+Offset:              10.303ns (Levels of Logic = 10)
+  Source:            XLXI_2/XLXI_81/I_Q1/I_36_35 (FF)
+  Destination:       S0 (PAD)
+  Source Clock:      C rising
+
+  Data Path: XLXI_2/XLXI_81/I_Q1/I_36_35 to S0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            22   0.514   0.989  I_36_35 (Q)
+     end scope: 'I_Q1'
+     end scope: 'XLXI_2/XLXI_81'
+     begin scope: 'XLXI_2/XLXI_5'
+     begin scope: 'I_M01'
+     AND3:I2->O            1   0.612   0.357  I_36_30 (M1)
+     OR2:I0->O             1   0.612   0.000  I_36_38 (O)
+     end scope: 'I_M01'
+     MUXF5:I0->O          15   0.278   0.864  I_O (O)
+     end scope: 'XLXI_2/XLXI_5'
+     INV:I->O              1   0.612   0.357  XLXI_2/XLXI_6/XLXI_26/XLXI_8 (XLXI_2/XLXI_6/XLXI_26/XLXN_24)
+     OR2:I0->O             1   0.612   0.357  XLXI_2/XLXI_6/XLXI_26/XLXI_5 (XLXI_2/XLXI_6/XLXI_26/XLXN_4)
+     AND4:I0->O            1   0.612   0.357  XLXI_2/XLXI_6/XLXI_26/XLXI_1 (S6_OBUF)
+     OBUF:I->O                 3.169          S6_OBUF (S6)
+    ----------------------------------------
+    Total                     10.303ns (7.021ns logic, 3.282ns route)
+                                       (68.1% logic, 31.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_28/O'
+  Total number of paths / destination ports: 50 / 8
+-------------------------------------------------------------------------
+Offset:              9.982ns (Levels of Logic = 10)
+  Source:            XLXI_23/XLXI_26/I_Q0/I_36_35 (FF)
+  Destination:       S0 (PAD)
+  Source Clock:      XLXI_28/O rising
+
+  Data Path: XLXI_23/XLXI_26/I_Q0/I_36_35 to S0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             9   0.514   0.697  I_36_35 (Q)
+     end scope: 'I_Q0'
+     end scope: 'XLXI_23/XLXI_26'
+     begin scope: 'XLXI_2/XLXI_4'
+     begin scope: 'I_M23'
+     AND3:I0->O            1   0.612   0.357  I_36_30 (M1)
+     OR2:I0->O             1   0.612   0.000  I_36_38 (O)
+     end scope: 'I_M23'
+     MUXF5:I1->O          13   0.278   0.836  I_O (O)
+     end scope: 'XLXI_2/XLXI_4'
+     INV:I->O              1   0.612   0.357  XLXI_2/XLXI_6/XLXI_5/XLXI_11 (XLXI_2/XLXI_6/XLXI_5/XLXN_43)
+     OR3:I1->O             1   0.612   0.357  XLXI_2/XLXI_6/XLXI_5/XLXI_12 (XLXI_2/XLXI_6/XLXI_5/XLXN_54)
+     AND4:I2->O            1   0.612   0.357  XLXI_2/XLXI_6/XLXI_5/XLXI_3 (S3_OBUF)
+     OBUF:I->O                 3.169          S3_OBUF (S3)
+    ----------------------------------------
+    Total                      9.982ns (7.021ns logic, 2.961ns route)
+                                       (70.3% logic, 29.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_31/O'
+  Total number of paths / destination ports: 50 / 8
+-------------------------------------------------------------------------
+Offset:              9.982ns (Levels of Logic = 10)
+  Source:            XLXI_17/XLXI_28/I_Q0/I_36_35 (FF)
+  Destination:       S0 (PAD)
+  Source Clock:      XLXI_31/O rising
+
+  Data Path: XLXI_17/XLXI_28/I_Q0/I_36_35 to S0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             9   0.514   0.697  I_36_35 (Q)
+     end scope: 'I_Q0'
+     end scope: 'XLXI_17/XLXI_28'
+     begin scope: 'XLXI_2/XLXI_4'
+     begin scope: 'I_M01'
+     AND3:I0->O            1   0.612   0.357  I_36_30 (M1)
+     OR2:I0->O             1   0.612   0.000  I_36_38 (O)
+     end scope: 'I_M01'
+     MUXF5:I0->O          13   0.278   0.836  I_O (O)
+     end scope: 'XLXI_2/XLXI_4'
+     INV:I->O              1   0.612   0.357  XLXI_2/XLXI_6/XLXI_5/XLXI_11 (XLXI_2/XLXI_6/XLXI_5/XLXN_43)
+     OR3:I1->O             1   0.612   0.357  XLXI_2/XLXI_6/XLXI_5/XLXI_12 (XLXI_2/XLXI_6/XLXI_5/XLXN_54)
+     AND4:I2->O            1   0.612   0.357  XLXI_2/XLXI_6/XLXI_5/XLXI_3 (S3_OBUF)
+     OBUF:I->O                 3.169          S3_OBUF (S3)
+    ----------------------------------------
+    Total                      9.982ns (7.021ns logic, 2.961ns route)
+                                       (70.3% logic, 29.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_32/O'
+  Total number of paths / destination ports: 50 / 8
+-------------------------------------------------------------------------
+Offset:              10.034ns (Levels of Logic = 10)
+  Source:            XLXI_44/XLXI_26/I_Q0/I_36_35 (FF)
+  Destination:       S0 (PAD)
+  Source Clock:      XLXI_32/O rising
+
+  Data Path: XLXI_44/XLXI_26/I_Q0/I_36_35 to S0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            10   0.514   0.750  I_36_35 (Q)
+     end scope: 'I_Q0'
+     end scope: 'XLXI_44/XLXI_26'
+     begin scope: 'XLXI_2/XLXI_4'
+     begin scope: 'I_M23'
+     AND3B1:I2->O          1   0.612   0.357  I_36_31 (M0)
+     OR2:I1->O             1   0.612   0.000  I_36_38 (O)
+     end scope: 'I_M23'
+     MUXF5:I1->O          13   0.278   0.836  I_O (O)
+     end scope: 'XLXI_2/XLXI_4'
+     INV:I->O              1   0.612   0.357  XLXI_2/XLXI_6/XLXI_5/XLXI_11 (XLXI_2/XLXI_6/XLXI_5/XLXN_43)
+     OR3:I1->O             1   0.612   0.357  XLXI_2/XLXI_6/XLXI_5/XLXI_12 (XLXI_2/XLXI_6/XLXI_5/XLXN_54)
+     AND4:I2->O            1   0.612   0.357  XLXI_2/XLXI_6/XLXI_5/XLXI_3 (S3_OBUF)
+     OBUF:I->O                 3.169          S3_OBUF (S3)
+    ----------------------------------------
+    Total                     10.034ns (7.021ns logic, 3.013ns route)
+                                       (70.0% logic, 30.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_35/O'
+  Total number of paths / destination ports: 28 / 8
+-------------------------------------------------------------------------
+Offset:              9.928ns (Levels of Logic = 10)
+  Source:            XLXI_34/XLXI_32/I_Q0/I_36_35 (FF)
+  Destination:       S0 (PAD)
+  Source Clock:      XLXI_35/O rising
+
+  Data Path: XLXI_34/XLXI_32/I_Q0/I_36_35 to S0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             8   0.514   0.643  I_36_35 (Q)
+     end scope: 'I_Q0'
+     end scope: 'XLXI_34/XLXI_32'
+     begin scope: 'XLXI_2/XLXI_4'
+     begin scope: 'I_M01'
+     AND3B1:I2->O          1   0.612   0.357  I_36_31 (M0)
+     OR2:I1->O             1   0.612   0.000  I_36_38 (O)
+     end scope: 'I_M01'
+     MUXF5:I0->O          13   0.278   0.836  I_O (O)
+     end scope: 'XLXI_2/XLXI_4'
+     INV:I->O              1   0.612   0.357  XLXI_2/XLXI_6/XLXI_5/XLXI_11 (XLXI_2/XLXI_6/XLXI_5/XLXN_43)
+     OR3:I1->O             1   0.612   0.357  XLXI_2/XLXI_6/XLXI_5/XLXI_12 (XLXI_2/XLXI_6/XLXI_5/XLXN_54)
+     AND4:I2->O            1   0.612   0.357  XLXI_2/XLXI_6/XLXI_5/XLXI_3 (S3_OBUF)
+     OBUF:I->O                 3.169          S3_OBUF (S3)
+    ----------------------------------------
+    Total                      9.928ns (7.021ns logic, 2.907ns route)
+                                       (70.7% logic, 29.3% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Delay:               6.963ns (Levels of Logic = 4)
+  Source:            ESET (PAD)
+  Destination:       L (PAD)
+
+  Data Path: ESET to L
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            10   1.106   0.750  ESET_IBUF (ESET_IBUF)
+     INV:I->O              1   0.612   0.357  XLXI_47 (XLXN_194)
+     AND4:I1->O            1   0.612   0.357  XLXI_45/XLXI_8 (L_OBUF)
+     OBUF:I->O                 3.169          L_OBUF (L)
+    ----------------------------------------
+    Total                      6.963ns (5.499ns logic, 1.464ns route)
+                                       (79.0% logic, 21.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 12.92 secs
+ 
+--> 
+
+Total memory usage is 4503728 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

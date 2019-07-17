@@ -1,0 +1,3 @@
+sch2sym -intstyle ise -family spartan3e -refsym contador5 C:/Users/Rodrigo/ProyectoFinalSd2/contador5.sch C:/Users/Rodrigo/ProyectoFinalSd2/contador5.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym contador5 C:/Users/Rodrigo/ProyectoFinalSd2/contador5.sch C:/Users/Rodrigo/ProyectoFinalSd2/contador5.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym contador5 C:/Users/Rodrigo/ProyectoFinalSd2/contador5.sch C:/Users/Rodrigo/ProyectoFinalSd2/contador5.sym 

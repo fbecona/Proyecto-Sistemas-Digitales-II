@@ -1,0 +1,33 @@
+#Clock
+NET "C" LOC = "B8";
+
+#Anodos
+NET "AN0" LOC = "K14";
+NET "AN1" LOC = "M13";
+NET "AN2" LOC = "J12";
+NET "AN3" LOC = "F12";
+
+#Salidas 7 Segmentos
+NET "S0" LOC = "L14";
+NET "S1" LOC = "H12";
+NET "S2" LOC = "N14";
+NET "S3" LOC = "N11";
+NET "S4" LOC = "P12";
+NET "S5" LOC = "L13";
+NET "S6" LOC = "M12";
+
+#LED
+NET "L" LOC = "M5";
+
+#Boton para setear Hora
+NET "SETMU" LOC = "G12";
+NET "SETMD" LOC = "C11";
+NET "SETHU" LOC = "M4";
+NET "SETHD" LOC = "A7";
+
+#Habilitar seteo de hora
+NET "ESET" LOC = "N3";
+
+#ALARMA
+NET "E" LOC = "L3";
+NET "CE" LOC = "P11";

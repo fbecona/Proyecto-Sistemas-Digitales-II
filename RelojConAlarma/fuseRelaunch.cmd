@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/Rodrigo/ProyectoFinalSd2/reloj_reloj_sch_tb_isim_beh.exe" -prj "C:/Users/Rodrigo/ProyectoFinalSd2/reloj_reloj_sch_tb_beh.prj" "work.reloj_reloj_sch_tb" "work.glbl" 

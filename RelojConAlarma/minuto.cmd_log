@@ -1,0 +1,2 @@
+sch2sym -intstyle ise -family spartan3e -w -refsym minuto C:/Users/Rodrigo/ProyectoFinalSd2/minuto.sch C:/Users/Rodrigo/ProyectoFinalSd2/minuto.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym minuto C:/Users/Rodrigo/ProyectoFinalSd2/minuto.sch C:/Users/Rodrigo/ProyectoFinalSd2/minuto.sym 
